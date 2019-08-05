@@ -13,7 +13,21 @@
     {{-- <link href="{{ asset('assets/css/ipro.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('assets/plugins/select2/select2.min.css') }}" rel="stylesheet">
     @stack('css')
-    @stack('style')
+    <style>
+        .btn.btn-ipro {
+            background-color: #136332;
+            color: #fff;
+            border-radius: 0;
+        }
+
+        .btn.btn-ipro:hover {
+            background-color: #0C4020;
+        }
+
+        .nav-link.active i {
+            color: #8BC34A !important;
+        }
+    </style>
 </head>
 
 <body class="sidebar-fixed header-fixed">
@@ -70,7 +84,6 @@
     <script src="{{ asset('assets/plugins/sweetalert/sweetalert.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/select2/select2.full.min.js') }}"></script>
     @stack('js')
-    @stack('script')
     <script>
         $(document).ready(function () {
             $('.btnLogout').on('click', function (e) {
