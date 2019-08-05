@@ -19,6 +19,6 @@ class Admin
         if (Auth::check() && Auth::user()->status == 'admin')
             return $next($request);
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

@@ -32,7 +32,7 @@
 
 <body class="sidebar-fixed header-fixed">
     <div class="page-wrapper">
-        <nav class="navbar page-header">
+        <nav class="navbar page-header navbar-dark bg-dark">
             <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
                 <i class="fa fa-bars"></i>
             </a>
@@ -48,7 +48,7 @@
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <img src="{{ asset('carbon/imgs/avatar-1.png') }}" class="avatar avatar-sm" alt="logo">
                         <span class="small ml-1 d-md-down-none"></span>
