@@ -458,6 +458,17 @@ iframe {
   position: relative;
 }
 
+.carousel-caption {
+    color: #fff;
+    text-shadow: none!important;
+    /* position: relative!important;
+    left: 50%!important;
+    right: 50%!important; */
+    /* right: 10px!important; */
+    /* left: 0!important;
+    right: 0!important; */
+}
+
 ol.carousel-indicators {
   position: absolute;
   bottom: 0;
@@ -473,14 +484,14 @@ ol.carousel-indicators li.active {
   float: left;
   width: 10px;
   height: 10px;
-  margin: 0;
+  margin: 0 10px;
   border-radius: 0;
-  border: 0;
+  border: 1px solid #9E9E9E;
   background: transparent;
 }
 
 ol.carousel-indicators li.active {
-  background: yellow;
+  background: #9E9E9E;
 }
 
 /*[ LOADDING ]
@@ -979,7 +990,7 @@ ol.carousel-indicators li.active {
 
 li.sale-noti > a {
     color: white;
-    text-decoration: underline;
+    border-bottom: 1px solid #fafafa;
 }
 
 .main_menu > li:hover > a {
