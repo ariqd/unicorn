@@ -32,7 +32,7 @@
 
 <body class="sidebar-fixed header-fixed">
     <div class="page-wrapper">
-        <nav class="navbar page-header navbar-dark bg-dark">
+        <nav class="navbar page-header navbar-dark bg-danger">
             <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
                 <i class="fa fa-bars"></i>
             </a>
@@ -42,7 +42,7 @@
                 {{-- <img src="{{ asset('ass-admin/img/logo.png') }}" width="80" alt="logo ipro"> --}}
             </a>
 
-            <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+            <a href="#" class="btn btn-link sidebar-toggle d-md-down-none text-light">
                 <i class="fa fa-bars"></i>
             </a>
 

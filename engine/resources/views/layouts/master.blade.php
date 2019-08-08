@@ -4,46 +4,25 @@
 <head>
     <title>@yield("title")</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!--===============================================================================================-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/icons/favicon.png') }}" />
-    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/icons/favicon1.png') }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
-    --}}
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css"
         href="{{ asset('assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/themify/themify-icons.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/elegant-font/html-css/style.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/animate/animate.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/css-hamburgers/hamburgers.min.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/animsition/css/animsition.min.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/select2/select2.min.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/daterangepicker/daterangepicker.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/slick/slick.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/lightbox2/css/lightbox.min.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
-    <!--===============================================================================================-->
     @stack('css')
 </head>
 
@@ -165,7 +144,7 @@
     @yield("content")
 
     <!-- Footer -->
-    <footer class="bg-dark py-4 text-white">
+    <footer class="bg-dark pt-4 text-white">
         <div class="text-center pb-5 mt-3" style="border-bottom: 5px solid #f44336">
             <h1 class="mb-3">HUBUNGI KAMI</h1>
             <a>
@@ -176,34 +155,32 @@
             </a>
         </div>
 
-
-        <div class="container pt-4">
+        <div class="container py-3">
             <div class="row text-center">
                 <div class="col-12 col-lg-4">
                     <a href="facebook.com">
-                        <img src="{{ asset('assets/images/icons/fb.png') }}" alt="facebook-icon" class="img-fluid" style="width: 35px">
+                        <img src="{{ asset('assets/images/icons/fb.png') }}" alt="facebook-icon" class="img-fluid"
+                            style="width: 35px">
                     </a>
                     <a href="twitter.com">
-                        <img src="{{ asset('assets/images/icons/tw.png') }}" alt="twitter-icon" class="img-fluid" style="width: 35px">
+                        <img src="{{ asset('assets/images/icons/tw.png') }}" alt="twitter-icon" class="img-fluid"
+                            style="width: 35px">
                     </a>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <h4 class="mt-2 text-secondary">&copy;{{ date("Y") }} Unicorn Tracking</h4>
+                    <p class="mt-2 text-secondary">&copy;{{ date("Y") }} Unicorn Tracking</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <div class="d-flex align-items-center">
-                        <a href="" class="text-white px-2 border-right">Our Services</a>
-                        <a href="" class="text-white px-2 border-right">About Us</a>
-                        <a href="" class="text-white px-2 border-right">News</a>
+                    <nav class="pt-2">
+                        <a href="" class="text-white px-2">Our Services</a>
+                        <a href="" class="text-white px-2">About Us</a>
+                        <a href="" class="text-white px-2">News</a>
                         <a href="" class="text-white px-2">Contact Us</a>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </div>
     </footer>
-    {{--<div class="bg10 p-t-10 p-b-20 p-l-45 p-r-45">--}}
-
-    {{--</div>--}}
 
     <!-- Back to top -->
     <div class="btn-back-to-top bg0-hov" id="myBtn">
@@ -215,30 +192,19 @@
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
 
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assets/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
-    <!--===============================================================================================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/vendor/animsition/js/animsition.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assets/vendor/bootstrap/js/popper.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assets/vendor/select2/select2.min.js') }}"></script>
-    <script type="text/javascript">
-        $(".selection-1").select2({
-            minimumResultsForSearch: 20,
-            dropdownParent: $('#dropDownSelect1')
-        });
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
-    <!--===============================================================================================-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="{{ asset('assets/vendor/select2/select2.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendor/slick/slick.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/slick-custom.js') }}"></script>
-    <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assets/vendor/countdowntime/countdowntime.js') }}"></script>
-    <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assets/vendor/lightbox2/js/lightbox.min.js') }}"></script>
-    <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assets/vendor/sweetalert/sweetalert.min.js') }}"></script>
     <script type="text/javascript">
         $('.block2-btn-addcart').each(function () {
@@ -255,13 +221,14 @@
             });
         });
 
+        $(".selection-1").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+        });
+
     </script>
-
-    <!--===============================================================================================-->
     <script src="{{ asset('assets/js/main.js') }}"></script>
-
     @stack('js')
-
 </body>
 
 </html>
