@@ -69,4 +69,14 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function viewRegisterUser() 
+    {
+        return view('auth.register.user');
+    }
+
+    public function viewRegisterPartner() 
+    {
+        return view('auth.register.partner');
+    }
 }

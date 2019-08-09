@@ -25,11 +25,11 @@ Home
 
 @section("content")
 @include("layouts.slider")
-<section class="pt-4">
+<section class="pt-3">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-8 offset-lg-2">
-                <h1><b>Unicorn Truck</b></h1>
+                <h2><b>Unicorn Truck</b></h2>
                 <p class="mt-2">
                     <b>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -169,7 +169,7 @@ Home
 <section class="container py-5">
     <div class="row text-center text-lg-left">
         <div class="col-12 col-lg-6" style="background: url({{ asset('assets/images/reds.png') }})">
-            <h2 class="mt-5">Kami siap untuk menjadi partner anda.</h2>
+            <h3 class="mt-5">Kami siap untuk menjadi partner anda.</h3>
             <p class="py-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam illum odit corrupti ipsam
                 exercitationem reiciendis quam! Qui ex dignissimos placeat cum eos sint aperiam consectetur repellat

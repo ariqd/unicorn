@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/register-user', 'Auth\RegisterController@viewRegisterUser');
+Route::get('/register-partner', 'Auth\RegisterController@viewRegisterPartner');
+
 Route::middleware('admin')->group(function () {
     Route::get('/admin', 'Admin\HomeController@index')->name('admin.home');
 });

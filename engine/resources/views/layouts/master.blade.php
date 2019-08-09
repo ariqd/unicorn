@@ -59,6 +59,10 @@
                                 <a href="{{ url('about') }}">Contact Us</a>
                             </li>
 
+                            <li class="{{ request()->is('login*') ? 'sale-noti' : '' }}">
+                                <a href="{{ url('login') }}">Login</a>
+                            </li>
+
                         </ul>
                     </nav>
                 </div>
@@ -150,7 +154,7 @@
             <a>
                 Gedung Kolega<br>
                 Jl. Veteran No 10 Lantai 2<br>
-                Sumur - Bandung<br>
+                Sumur Bandung<br>
                 Telp: 08991227888
             </a>
         </div>
