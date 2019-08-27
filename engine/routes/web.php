@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get("coba","ApiController@coba");
 
 Route::get('/', function () {
     return view('index');
