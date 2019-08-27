@@ -30,5 +30,29 @@ class Controller extends BaseController
         $response = $this->client()->get($url);
 		$result =  json_decode($response->getBody())->data;
 		return $result;
+    }
+
+    public function post($url, $data)
+	{
+		$response = $this->client()->post($url, ["json" => $data]);
+		$result["data"] =  json_decode($response->getBody())->data;
+		return $result;
 	}
+
+	public function put($url, $data)
+	{
+		unset($data["_method"]);
+		unset($data["_token"]);
+		$response = $this->client()->put($url, ["json" => $data]);
+		$result["data"] =  json_decode($response->getBody())->data;
+		return $result;
+    }
+
+    public function delete($url)
+	{
+		$response = $this->client()->delete($url);
+		$result =  json_decode($response->getBody());
+		return $result;
+	}
+
 }

@@ -11,6 +11,7 @@
 |
 */
 Route::get("coba","ApiController@coba");
+Route::get("login","ApiController@connect");
 
 Route::get('/', function () {
     return view('index');

@@ -10,4 +10,15 @@ class ApiController extends Controller
     {
         dd($this->get("drivers"));
     }
+
+    public function connect() {
+    	$data = [
+    		"username"=>"james",
+    		"password"=>"12345678"
+    	];
+    	dd($this->post("users_login",$data));
+    }
+
+    
+    
 }
