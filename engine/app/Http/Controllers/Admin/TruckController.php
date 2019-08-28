@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class DriverController extends Controller
+class TruckController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DriverController extends Controller
      */
     public function index()
     {
-        return view("admin.driver.index",$this->get("drivers"));
+        return view('admin.truk.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class DriverController extends Controller
      */
     public function create()
     {
-        return view("admin.driver.form");
+        //
     }
 
     /**
@@ -35,7 +35,7 @@ class DriverController extends Controller
      */
     public function store(Request $request)
     {
-        $this->post("drivers",$request->all());
+        //
     }
 
     /**
@@ -46,10 +46,7 @@ class DriverController extends Controller
      */
     public function show($id)
     {
-        $d["edit"] = true;
-        $d["data"] = $this->getData("drivers/$id");
-        return view("admin.driver.show",$d);
-
+        //
     }
 
     /**
@@ -60,7 +57,7 @@ class DriverController extends Controller
      */
     public function edit($id)
     {
-        return view("admin.driver.form",$this->get("drivers/$id"));
+        //
     }
 
     /**
@@ -72,8 +69,7 @@ class DriverController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->put("drivers/$id", $request->all());
-        return redirect()->back();
+        //
     }
 
     /**
@@ -84,7 +80,6 @@ class DriverController extends Controller
      */
     public function destroy($id)
     {
-        $this->delete("drivers/$id");
-        return redirect()->back();
+        //
     }
 }

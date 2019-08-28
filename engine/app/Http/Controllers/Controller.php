@@ -32,6 +32,13 @@ class Controller extends BaseController
 		return $result;
     }
 
+    public function getData($url)
+	{
+        $response = $this->client()->get($url);
+		$result =  json_decode($response->getBody())->data;
+		return $result;
+    }
+
     public function post($url, $data)
 	{
 		$response = $this->client()->post($url, ["json" => $data]);

@@ -7,30 +7,39 @@ Driver
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-12">
             <div class="card">
                 <div class="card-header"></div>
-
+                <h2>Detail / Edit </h2>
                 <div class="card-body">
+                    <form method="POST" action="{{ @$edit ? url("driver/$data->_id") : url("driver")}}">
+                        @csrf
+                        @if(isset($edit))
+                            @method("PUT")
+                        @endif
                         <div class="form-group form-group-default">
-                            <label>Name</label>
+                            <label for="name">Name</label>
+                            <input id="name" class="form-control" name="name" value="{{$data->name ?? ""}}">
                         </div>
 
                         <div class="form-group form-group-default">
-                            <label>Username</label>
+                            <label for="username">Username</label>
+                            <input id="username" class="form-control" name="username" value="{{$data->username ?? ""}}">
                         </div>
 
                         <div class="form-group form-group-default">
-                            <label>Telephone</label>
-                        </div>
-
-                        <div class="form-group form-group-default">
-                            <label>Email</label>
+                            <label for="telephone">Telephone</label>
+                            <input id="telephone" class="form-control" name="telephone"
+                                value="{{$data->telephone ?? ""}}">
                         </div>
 
                         <div class="form-group form-group-default">
                             <label>Picture</label>
+                            <img src="#">
+                            <input type="file" id="telephone" class="form-control" name="image">
                         </div>
+                        <input type="submit" class="btn btn-dark form-control" value="Submit">
+                    </form>
                 </div>
             </div>
         </div>

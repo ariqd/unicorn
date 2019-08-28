@@ -5,21 +5,24 @@ Notifikasi
 @endsection
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="card" style="width: 20%">
-            <div class="row" style="padding: 3%;">
-                <div class="col-md-2">
-                    <span class="align-middle">
-                        12 Juni 2019<br/>
-                        12.45
-                    </span>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12">
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Notifikasi</h2>
                 </div>
-                <div class="col-md-10" style="font-size: 20px;">
-                    Bpk/Ibu Suyono memposting permintaan pengiriman minuman rute Jakarta - Bandung
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-2">
+                            12 Juni 2019<br>
+                            12.45</div>
+                        <div class="col-10">Bpk/Ibu Suyono memposting permintaan pengiriman minuman rute Jakarta -
+                            Bandung</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div> @endsection
