@@ -28,7 +28,10 @@ Pengaturan Truk
                         </div>
                         <div class="form-group form-group-default">
                             <label>Driver</label>
-                            <input type="text" class="form-control">
+                            <select>
+                                <option value="---">---</option>
+                                <option value="Test">Test</option>
+                            </select>
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-3">

@@ -6,19 +6,17 @@ Notifikasi
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard Admin</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+    <div class="row">
+        <div class="card" style="width: 20%">
+            <div class="row" style="padding: 3%;">
+                <div class="col-md-2">
+                    <span class="align-middle">
+                        12 Juni 2019<br/>
+                        12.45
+                    </span>
+                </div>
+                <div class="col-md-10" style="font-size: 20px;">
+                    Bpk/Ibu Suyono memposting permintaan pengiriman minuman rute Jakarta - Bandung
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@
             <li class="nav-title">Truk</li>
 
             <li class="nav-item">
-                <a href="{{ url('drivers') }}" class="nav-link {{ (request()->is('drivers')) ? 'active' : '' }}">
+                <a href="{{ url('truk') }}" class="nav-link {{ (request()->is('truk')) ? 'active' : '' }}">
                     <i class="fa fa-cog"></i> Pengaturan
                 </a>
             </li>
