@@ -31,9 +31,9 @@ class ApiController extends Controller
             "username"=>$request["username"],
             "paswword"=>$request["password"],
             "telephone"=>$request["telephone"],
-            "profilePic"=>$request->file("profile")
+            "profilePic"=>$request->file('profile')
         ];
-        dd($data);
+        dd($this->post("users",$data));
     }
 
     public function userUpdateKTP(Request $request) {
@@ -42,6 +42,7 @@ class ApiController extends Controller
 
         dd($this->put("usersktp/$id",$foto));
     }
+
 
 
 
