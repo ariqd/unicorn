@@ -31,6 +31,8 @@ Route::get('/register-partner', 'Auth\RegisterController@viewRegisterPartner');
 
 Route::middleware('admin')->group(function () {
     Route::get('/admin', 'Admin\HomeController@index')->name('admin.home');
-    Route::get('/drivers', 'ApiController@getAllDriver');
     Route::get('/admin/truk', 'Admin\TrukController@index');
+    Route::resource('/drivers', 'Admin\DriverController');
+    Route::resource('/bids','Admin\BidController');
+    Route::resource('/shipments','Admin\ShipmentController');
 });

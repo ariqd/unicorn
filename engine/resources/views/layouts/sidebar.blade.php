@@ -16,13 +16,13 @@
             <li class="nav-title">Muatan</li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link {{ (request()->is('drivers')) ? 'active' : '' }}">
+                <a href="{{ url('bids') }}" class="nav-link {{ (request()->is('bids')) ? 'active' : '' }}">
                     <i class="fa fa-money"></i> Bidding
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="{{ url('drivers') }}" class="nav-link {{ (request()->is('drivers')) ? 'active' : '' }}">
+                <a href="{{ url('shipments') }}" class="nav-link {{ (request()->is('shipments')) ? 'active' : '' }}">
                     <i class="fa fa-search"></i> Pencarian
                 </a>
             </li>
