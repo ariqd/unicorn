@@ -31,13 +31,18 @@ Route::get('/register-partner', 'Auth\RegisterController@viewRegisterPartner');
 
 Route::middleware('admin')->group(function () {
     Route::get('/admin', 'Admin\HomeController@index')->name('admin.home');
-    Route::resource('/drivers', 'Admin\DriverController');
-    Route::resource('/bids','Admin\BidController');
-    Route::resource('/shipments','Admin\ShipmentController');
-    Route::resource('/pengiriman', 'Admin\SendShipmentController');
+    Route::resource('/admin/drivers', 'Admin\DriverController');
+    Route::resource('/admin/bids','Admin\BidController');
+    Route::resource('/admin/shipments','Admin\ShipmentController');
+    Route::resource('/admin/pengiriman', 'Admin\SendShipmentController');
     Route::resource('/admin/truk', 'Admin\TruckController@index');
     Route::get('/admin/pengiriman/belumdikirim', 'Admin\KirimController@index');
     Route::get('/admin/pengiriman/sedangdikirim', 'Admin\KirimController@sedangdikirim');
     Route::get('/admin/truk', 'Admin\TrukController@index');
-    Route::get('/administrasi', 'Admin\PenggunaControlller@index');
+    Route::get('/admin/pengguna/belumdiproses', 'Admin\PenggunaController@index');
+    Route::get('/admin/pengguna/disetujui', 'Admin\PenggunaController@index');
+    Route::get('/admin/pengguna/ditolak', 'Admin\PenggunaController@index');
+    Route::get('/admin/partner/belumdiproses', 'Admin\PartnerController@index');
+    Route::get('/admin/partner/disetujui', 'Admin\PartnerController@index');
+    Route::get('/admin/partner/ditolak', 'Admin\PartnerController@index');
 });
