@@ -11,4 +11,9 @@ class KirimController extends Controller
     {
         return view('admin.pengiriman.index');
     }
+
+    public function sedangdikirim()
+    {
+    	return view('admin.pengiriman.sedangdikirim');
+    }
 }

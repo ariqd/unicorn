@@ -55,16 +55,16 @@ Pengaturan Truk
                 <form>
                     <div class="form-group form-group-default">
                         <label>Nopol</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" readonly>
                     </div>
 
                     <div class="form-group form-group-default">
                         <label>Tipe Truk</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" readonly>
                     </div>
                     <div class="form-group form-group-default">
                         <label>Kategori Truk</label>
-                        <input type="password" class="form-control">
+                        <input type="text" class="form-control" readonly>
                     </div>
                     <div class="form-group form-group-default">
                         <label>Driver</label>

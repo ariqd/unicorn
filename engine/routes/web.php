@@ -34,6 +34,8 @@ Route::middleware('admin')->group(function () {
     Route::resource('/drivers', 'Admin\DriverController');
     Route::resource('/bids','Admin\BidController');
     Route::resource('/shipments','Admin\ShipmentController');
-    Route::get('/admin/pengiriman', 'Admin\KirimController@index');
+    Route::get('/admin/pengiriman/belumdikirim', 'Admin\KirimController@index');
+    Route::get('/admin/pengiriman/sedangdikirim', 'Admin\KirimController@sedangdikirim');
     Route::get('/admin/truk', 'Admin\TrukController@index');
+    Route::get('/administrasi', 'Admin\PenggunaControlller@index')
 });
