@@ -9,7 +9,9 @@ Pengguna - Belum Diproses
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"></div>
+                <div class="card-header">
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#daftarpengguna"></button>
+                </div>
                 <div class="card-body">
                     <table class="table table-bordered table-stripped">
                         <thead>
@@ -43,7 +45,7 @@ Pengguna - Belum Diproses
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Pilih Driver</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Detail Pengguna</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -51,22 +53,43 @@ Pengguna - Belum Diproses
             <div class="modal-body">
                 <form>
                         <div class="form-group form-group-default">
-                            <label>Nama:</label>
-                            <label>testing</label>
+                            <label>Email</label>
+                            <input type="text" class="form-control" readonly>
+                        </div>
+
+                        <div class="form-group form-group-default">
+                            <label>Kata Sandi</label>
+                            <input type="text" class="form-control" readonly>
                         </div>
                         <div class="form-group form-group-default">
-                            <label>Organisasi:</label>
-                            <label>abc</label>
+                            <label>Nama</label>
+                            <input type="text" class="form-control" readonly>
                         </div>
                         <div class="form-group form-group-default">
-                            <label>No. KTP:</label>
-                            <label>11223344556677</label>
+                            <label>No. KTP</label>
+                            <input type="text" class="form-control" readonly>
                         </div>
                         <div class="form-group form-group-default">
-                            <label>Email:</label>
-                            <label>a@a.com</label>
+                            <label>Kantor/Organisasi</label>
+                            <input type="text" class="form-control" readonly>
+                        </div>
+                        <div class="form-group form-group-default">
+                            <label>No. HP</label>
+                            <input type="text" class="form-control" readonly>
+                        </div>
+                        <div class="form-group form-group-default">
+                            <label>Foto KTP</label>
+                            <input type="text" class="form-control" readonly>
+                        </div>
+                        <div class="form-group form-group-default">
+                            <label>Selfie dengan KTP</label>
+                            <input type="text" class="form-control" readonly>
                         </div>
                     </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Setujui Pendaftaran</button>
+                <button type="button" class="btn btn-danger">Tolak Pendaftaran</button>
             </div>
         </div>
     </div>
