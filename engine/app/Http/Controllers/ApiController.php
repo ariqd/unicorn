@@ -6,19 +6,35 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
-    public function coba()
+    public function getAllDriver()
     {
         dd($this->get("drivers"));
     }
 
-    public function connect() {
+    public function login(Request $request) {
     	$data = [
-    		"username"=>"james",
-    		"password"=>"12345678"
-    	];
+    		"username"=>$request["username"],
+    		"password"=>$request["password"]
+        ];
     	dd($this->post("users_login",$data));
     }
 
-    
-    
+    public function getUserDetail(Request $request) {
+        $data = $request["id"];
+        dd($this->get("users/$data"));
+    }
+
+    public function userRegis(Request $request) {
+
+        $data = [
+            "name"=>$request["name"],
+            "username"=>$request["username"],
+            "paswword"=>$request["password"],
+            "telephone"=>$request["telephone"],
+            "profilePic"=>$request["profile"]
+        ];
+        dd($data);
+    }
+
+
 }
