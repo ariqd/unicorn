@@ -36,4 +36,8 @@ Route::middleware('admin')->group(function () {
     Route::resource('/shipments','Admin\ShipmentController');
     Route::resource('/pengiriman', 'Admin\SendShipmentController');
     Route::resource('/admin/truk', 'Admin\TruckController@index');
+    Route::get('/admin/pengiriman/belumdikirim', 'Admin\KirimController@index');
+    Route::get('/admin/pengiriman/sedangdikirim', 'Admin\KirimController@sedangdikirim');
+    Route::get('/admin/truk', 'Admin\TrukController@index');
+    Route::get('/administrasi', 'Admin\PenggunaControlller@index');
 });
