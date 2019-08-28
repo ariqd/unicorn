@@ -14,13 +14,13 @@
             </li>
 
             <li class="nav-title">Muatan</li>
-            
+
             <li class="nav-item">
-                <a href="{{ url('drivers') }}" class="nav-link {{ (request()->is('drivers')) ? 'active' : '' }}">
+                <a href="#" class="nav-link {{ (request()->is('drivers')) ? 'active' : '' }}">
                     <i class="fa fa-money"></i> Bidding
                 </a>
             </li>
-            
+
             <li class="nav-item">
                 <a href="{{ url('drivers') }}" class="nav-link {{ (request()->is('drivers')) ? 'active' : '' }}">
                     <i class="fa fa-search"></i> Pencarian
@@ -34,7 +34,7 @@
                     <i class="fa fa-cog"></i> Pengaturan
                 </a>
             </li>
-            
+
             <li class="nav-item">
                 <a href="{{ url('drivers') }}" class="nav-link {{ (request()->is('drivers')) ? 'active' : '' }}">
                     <i class="fa fa-truck"></i> Lacak

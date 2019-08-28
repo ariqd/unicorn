@@ -8,7 +8,7 @@
                 <div class="card-header bg-dark text-white text-center">Pendaftaran Pengguna</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
