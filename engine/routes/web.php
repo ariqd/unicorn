@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get("coba","ApiController@coba");
+Route::post("userregis","ApiController@userRegis");
+Route::get("coba","ApiController@getAllDriver");
+Route::get("loginapi","ApiController@login");
+Route::get("logindetails/{id}","ApiController@getUserDetail");
+
 
 Route::get('/', function () {
     return view('index');
