@@ -31,10 +31,18 @@ class ApiController extends Controller
             "username"=>$request["username"],
             "paswword"=>$request["password"],
             "telephone"=>$request["telephone"],
-            "profilePic"=>$request["profile"]
+            "profilePic"=>$request->file("profile")
         ];
         dd($data);
     }
+
+    public function userUpdateKTP(Request $request) {
+        $id = $request["id"];
+        $foto = $request->file("ktp");
+
+        dd($this->put("usersktp/$id",$foto));
+    }
+
 
 
 }
