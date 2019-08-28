@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 class DriverController extends Controller
 {
+<<<<<<< HEAD
     /**
      * Display a listing of the resource.
      *
@@ -84,5 +85,10 @@ class DriverController extends Controller
     {
         $this->delete("drivers/$id");
         return redirect()->back();
+=======
+    public function index()
+    {
+        return view('admin.driver.index');
+>>>>>>> 680b9016a15c3001830b797a1b302cd6117e9f98
     }
 }
