@@ -43,7 +43,7 @@
             <li class="nav-title">Muatan</li>
 
             <li class="nav-item">
-                <a href="{{ url('/admin/pengiriman/sedangdikirim') }}" class="nav-link {{ (request()->is('/admin/pengiriman/sedangdikirim')) ? 'active' : '' }}">
+                <a href="{{ url('/admin/shipments') }}" class="nav-link {{ (request()->is('/admin/shipments')) ? 'active' : '' }}">
                     <i class="fa fa-cog"></i> Muatan Sudah Kirim
                 </a>
             </li>
