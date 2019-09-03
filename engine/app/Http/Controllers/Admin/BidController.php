@@ -14,7 +14,9 @@ class BidController extends Controller
      */
     public function index()
     {
-        return view("admin.bid.index",$this->get("orders"));
+        $orders = $this->get('bids');
+
+        return view("admin.bid.index", ['data' => $orders]);
     }
 
     /**

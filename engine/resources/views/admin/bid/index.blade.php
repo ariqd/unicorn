@@ -6,6 +6,7 @@ Driver
 @push("js")
 <script>
     $(".kota").select2();
+
 </script>
 @endpush
 @section('content')
@@ -50,7 +51,8 @@ Driver
                                 <td>{{$item->idTruck[0]->size}} tidak ada isian ini truck jenis apa, cuma size /
                                     capacity</td>
                                 <td style="">{{"Rp. ".number_format($item->budget)}}</td>
-                                <td><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#sudahbid">Sudah Bid</button></td>
+                                <td><button type="button" class="btn btn-dark" data-toggle="modal"
+                                        data-target="#sudahbid">Sudah Bid</button></td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -61,13 +63,14 @@ Driver
     </div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Masukkan Nilai Bid</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
@@ -90,7 +93,8 @@ Driver
     </div>
 </div>
 
-<div class="modal fade" id="sudahbid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="sudahbid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

@@ -9,13 +9,14 @@ Driver
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="card">
-                <div class="card-header"></div>
-                <h2>Detail / Edit </h2>
+                <div class="card-header">
+                    <h2>Detail / Edit </h2>
+                </div>
                 <div class="card-body">
                     <form method="POST" action="{{ @$edit ? url("driver/$data->_id") : url("driver")}}">
                         @csrf
                         @if(isset($edit))
-                            @method("PUT")
+                        @method("PUT")
                         @endif
                         <div class="form-group form-group-default">
                             <label for="name">Name</label>

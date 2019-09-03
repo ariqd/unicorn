@@ -50,6 +50,7 @@ class DriverController extends Controller
     {
         $d["edit"] = true;
         $d["data"] = $this->getData("drivers/$id");
+
         return view("admin.driver.show", $d);
     }
 
