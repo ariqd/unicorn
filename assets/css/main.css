@@ -983,7 +983,7 @@ ol.carousel-indicators li.active {
 .main_menu > li > a {
     font-family: Montserrat-Regular;
     font-size: 15px;
-    color: White;
+    color: White!important;
     padding: 0;
     border-bottom: 1px solid transparent;
 }

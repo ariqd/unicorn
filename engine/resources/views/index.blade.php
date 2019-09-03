@@ -6,6 +6,10 @@ Home
 
 @push('css')
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    
     .img-relative {
         position: relative;
         text-align: center;
@@ -49,7 +53,7 @@ Home
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-8 offset-lg-2">
-                <div class="card">
+                <div class="card" id="ourservice">
                     <div class="card-body">
                         <h4 class="text-center">Cari Truk</h4>
                         <hr>
@@ -109,7 +113,7 @@ Home
     </div>
 </section>
 
-<section class="container pt-5">
+<section class="container pt-5" id="about">
     <div class="row">
         <div class="col-12 col-lg-6">
             <img src="{{ asset('assets/images/strength.png') }}" alt="" class="img-fluid img-relative w-100 h-100">
@@ -166,7 +170,7 @@ Home
     </div>
 </section>
 
-<section class="container py-5">
+<section class="container py-5" id="contact">
     <div class="row text-center text-lg-left">
         <div class="col-12 col-lg-6" style="background: url({{ asset('assets/images/reds.png') }})">
             <h3 class="mt-5">Kami siap untuk menjadi partner anda.</h3>
@@ -186,4 +190,5 @@ Home
         </div>
     </div>
 </section>
+
 @endsection

@@ -43,24 +43,24 @@
                     <nav class="menu">
                         <ul class="main_menu">
 
-                            <li class="{{ request()->is('/') ? 'sale-noti' : '' }}">
+                            <li class="{{ request()->is('/')  }}">
                                 <a href="{{ url('/') }}">Home</a>
                             </li>
 
-                            <li class="{{ request()->is('products*') ? 'sale-noti' : '' }}">
-                                <a href="{{ url('products?filter=suspensi') }}">Our Services</a>
+                            <li class="{{ request()->is('products*')  }}">
+                                <a onclick="scrollWin()">Our Services</a>
                             </li>
 
-                            <li class="{{ request()->is('blog*') ? 'sale-noti' : '' }}">
-                                <a href="{{ url('blog') }}">About Us</a>
+                            <li class="{{ request()->is('blog*')  }}">
+                                <a onclick="scrollWin2()">About Us</a>
                             </li>
 
-                            <li class="{{ request()->is('about*') ? 'sale-noti' : '' }}">
-                                <a href="{{ url('about') }}">Contact Us</a>
+                            <li class="{{ request()->is('about*')  }}">
+                                <a onclick="scrollWin3()">Contact Us</a>
                             </li>
 
-                            <li class="{{ request()->is('login*') ? 'sale-noti' : '' }}">
-                                <a href="{{ url('login') }}">Login</a>
+                            <li class="{{ request()->is('login*')  }}">
+                                <a href="{{ url('/login') }}">Login</a>
                             </li>
 
                         </ul>
@@ -231,6 +231,24 @@
         });
 
     </script>
+        <script>
+            function scrollWin() {
+                var elmnt = document.getElementById("ourservice");
+                elmnt.scrollIntoView();
+            }
+
+            function scrollWin2() {
+                var elmnt = document.getElementById("about");
+                elmnt.scrollIntoView();
+            }
+
+            function scrollWin3() {
+                var elmnt = document.getElementById("contact");
+                elmnt.scrollIntoView();
+            }
+
+            </script>
+   
     <script src="{{ asset('assets/js/main.js') }}"></script>
     @stack('js')
 </body>
