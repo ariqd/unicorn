@@ -126,7 +126,7 @@
             <nav class="side-menu">
                 <ul class="main-menu">
                         <li class="{{ request()->is('/')  }} item-menu-mobile">
-                                <button href="{{ url('/') }}">Home</button>
+                                <button><a href="{{ url('/') }}" class="text-light">Home</a></button>
                             </li>
 
                             <li class="{{ request()->is('products*')  }} item-menu-mobile">
