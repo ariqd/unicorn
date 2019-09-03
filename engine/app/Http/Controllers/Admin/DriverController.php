@@ -14,7 +14,9 @@ class DriverController extends Controller
      */
     public function index()
     {
-        return view("admin.driver.index",$this->get("drivers"));
+        $drivers = $this->get('drivers');
+
+        return view("admin.driver.index", ['data' => $drivers]);
     }
 
     /**
@@ -35,7 +37,7 @@ class DriverController extends Controller
      */
     public function store(Request $request)
     {
-        $this->post("drivers",$request->all());
+        $this->post("drivers", $request->all());
     }
 
     /**
@@ -48,8 +50,7 @@ class DriverController extends Controller
     {
         $d["edit"] = true;
         $d["data"] = $this->getData("drivers/$id");
-        return view("admin.driver.show",$d);
-
+        return view("admin.driver.show", $d);
     }
 
     /**
@@ -60,7 +61,7 @@ class DriverController extends Controller
      */
     public function edit($id)
     {
-        return view("admin.driver.form",$this->get("drivers/$id"));
+        return view("admin.driver.form", $this->get("drivers/$id"));
     }
 
     /**

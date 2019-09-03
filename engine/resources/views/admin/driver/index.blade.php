@@ -4,15 +4,48 @@
 Driver
 @endsection
 
+@push('css')
+<link href="{{ asset('ass-admin/plugins/DataTables/datatables.min.css') }}" rel="stylesheet" />
+@endpush
+
+@push('js')
+<script src="{{ asset('ass-admin/plugins/DataTables/datatables.min.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        $('#datatable').DataTable();
+
+        $('.btnDelete').on('click', function (e) {
+            e.preventDefault();
+            var parent = $(this).parent();
+
+            swal({
+                    title: "Apa anda yakin?",
+                    text: "Data akan terhapus secara permanen!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then(function (willDelete) {
+                    if (willDelete) {
+                        parent.find('.formDelete').submit();
+                    }
+                });
+        });
+    });
+
+</script>
+@endpush
+
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row">
+        <div class="col-12">
+            <h1>Drivers</h1>
+        </div>
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header"></div>
-
                 <div class="card-body">
-                    <table class="table table-bordered table-stripped">
+                    <table class="table table-hover table-stripped" id="datatable">
                         <thead>
                             <th>No</th>
                             <th>Profile Picture</th>
@@ -20,7 +53,6 @@ Driver
                             <th>Username</th>
                             <th>Telephone</th>
                             <th></th>
-
                         </thead>
                         <tbody>
                             @foreach($data as $item)
