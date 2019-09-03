@@ -125,21 +125,25 @@
         <div class="wrap-side-menu">
             <nav class="side-menu">
                 <ul class="main-menu">
-                    <li class="item-menu-mobile">
-                        <a href="index.php">Beranda</a>
-                    </li>
+                        <li class="{{ request()->is('/')  }} item-menu-mobile">
+                                <button><a href="{{ url('/') }}" class="text-light">Home</a></button>
+                            </li>
 
-                    <li class="item-menu-mobile">
-                        <a href="product.php">Produk</a>
-                    </li>
+                            <li class="{{ request()->is('products*')  }} item-menu-mobile">
+                                <button onclick="scrollWin()">Our Services</button>
+                            </li>
 
-                    <li class="item-menu-mobile">
-                        <a href="blog.php">Blog</a>
-                    </li>
+                            <li class="{{ request()->is('blog*')  }} item-menu-mobile">
+                                <button onclick="scrollWin2()">About Us</button>
+                            </li>
 
-                    <li class="item-menu-mobile">
-                        <a href="about.php">Informasi</a>
-                    </li>
+                            <li class="{{ request()->is('about*')  }} item-menu-mobile">
+                                <button onclick="scrollWin3()">Contact Us</button>
+                            </li>
+
+                            <li class="{{ request()->is('login*')  }} item-menu-mobile">
+                                <button href="{{ url('/login') }}">Login</button>
+                            </li>
                 </ul>
             </nav>
         </div>
