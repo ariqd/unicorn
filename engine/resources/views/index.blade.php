@@ -10,6 +10,10 @@ Home
         scroll-behavior: smooth;
     }
     
+    .item-menu-mobile{
+        padding: 10px;
+    }
+
     .img-relative {
         position: relative;
         text-align: center;

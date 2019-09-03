@@ -48,19 +48,19 @@
                             </li>
 
                             <li class="{{ request()->is('products*')  }}">
-                                <button onclick="scrollWin()">Our Services</button>
+                                <a onclick="scrollWin()">Our Services</a>
                             </li>
 
                             <li class="{{ request()->is('blog*')  }}">
-                                <button onclick="scrollWin2()">About Us</button>
+                                <a onclick="scrollWin2()">About Us</a>
                             </li>
 
                             <li class="{{ request()->is('about*')  }}">
-                                <button onclick="scrollWin3()">Contact Us</button>
+                                <a onclick="scrollWin3()">Contact Us</a>
                             </li>
 
                             <li class="{{ request()->is('login*')  }}">
-                                <button href="{{ url('/login') }}">Login</button>
+                                <a href="{{ url('/login') }}">Login</a>
                             </li>
 
                         </ul>
@@ -125,21 +125,25 @@
         <div class="wrap-side-menu">
             <nav class="side-menu">
                 <ul class="main-menu">
-                    <li class="item-menu-mobile">
-                        <a href="index.php">Beranda</a>
-                    </li>
+                        <li class="{{ request()->is('/')  }} item-menu-mobile">
+                                <button href="{{ url('/') }}">Home</button>
+                            </li>
 
-                    <li class="item-menu-mobile">
-                        <a href="product.php">Produk</a>
-                    </li>
+                            <li class="{{ request()->is('products*')  }} item-menu-mobile">
+                                <button onclick="scrollWin()">Our Services</button>
+                            </li>
 
-                    <li class="item-menu-mobile">
-                        <a href="blog.php">Blog</a>
-                    </li>
+                            <li class="{{ request()->is('blog*')  }} item-menu-mobile">
+                                <button onclick="scrollWin2()">About Us</button>
+                            </li>
 
-                    <li class="item-menu-mobile">
-                        <a href="about.php">Informasi</a>
-                    </li>
+                            <li class="{{ request()->is('about*')  }} item-menu-mobile">
+                                <button onclick="scrollWin3()">Contact Us</button>
+                            </li>
+
+                            <li class="{{ request()->is('login*')  }} item-menu-mobile">
+                                <button href="{{ url('/login') }}">Login</button>
+                            </li>
                 </ul>
             </nav>
         </div>
