@@ -48,19 +48,19 @@
                             </li>
 
                             <li class="{{ request()->is('products*')  }}">
-                                <a onclick="scrollWin()">Our Services</a>
+                                <button onclick="scrollWin()">Our Services</button>
                             </li>
 
                             <li class="{{ request()->is('blog*')  }}">
-                                <a onclick="scrollWin2()">About Us</a>
+                                <button onclick="scrollWin2()">About Us</button>
                             </li>
 
                             <li class="{{ request()->is('about*')  }}">
-                                <a onclick="scrollWin3()">Contact Us</a>
+                                <button onclick="scrollWin3()">Contact Us</button>
                             </li>
 
                             <li class="{{ request()->is('login*')  }}">
-                                <a href="{{ url('/login') }}">Login</a>
+                                <button href="{{ url('/login') }}">Login</button>
                             </li>
 
                         </ul>

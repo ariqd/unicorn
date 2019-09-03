@@ -24,6 +24,10 @@ Home
         transform: translate(-50%, -50%);
     }
 
+    button{
+        color: white;
+    }
+
 </style>
 @endpush
 
