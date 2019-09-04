@@ -32,14 +32,13 @@
 
 <body class="sidebar-fixed header-fixed">
     <div class="page-wrapper">
-        <nav class="navbar page-header navbar-dark bg-danger">
+        <nav class="navbar page-header navbar-dark bg-dark">
             <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
                 <i class="fa fa-bars"></i>
             </a>
 
-            <a class="navbar-brand" href="#">
-                <h4>Unicorn</h4>
-                {{-- <img src="{{ asset('ass-admin/img/logo.png') }}" width="80" alt="logo ipro"> --}}
+            <a class="navbar-brand" href="{{ url('admin') }}">
+                <img src="{{ asset('ass-admin/img/logo.png') }}" width="45" alt="unicorn">
             </a>
 
             <a href="#" class="btn btn-link sidebar-toggle d-md-down-none text-light">

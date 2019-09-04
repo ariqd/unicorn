@@ -14,7 +14,7 @@ Route::prefix('api/v1')->group(function () {
 Route::post("userregis","ApiController@userRegis");
 Route::post("userktp/{id}","ApiController@userUpdateKTP");
 Route::get("coba","ApiController@getAllDriver");
-Route::get("loginapi","ApiController@login");
+Route::post("loginapi","ApiController@login");
 Route::get("logindetails/{id}","ApiController@getUserDetail");
 });
 
