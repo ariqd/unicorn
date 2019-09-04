@@ -5,7 +5,6 @@
     <title>@yield("title")</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="icon" type="image/png" href="{{ asset('assets/images/icons/favicon1.png') }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -27,92 +26,60 @@
 </head>
 
 <body class="animsition">
-
-    <!-- Header -->
     <header class="header1">
-        <!-- Header desktop -->
         <div class="container-menu-header">
             <div class="wrap_header">
-                <!-- Logo -->
                 <a href="index.php" class="logo">
                     <img src="{{ asset('assets/images/icons/logo.png') }}" alt="IMG-LOGO">
                 </a>
-
-                <!-- Menu -->
                 <div class="wrap_menu">
                     <nav class="menu">
                         <ul class="main_menu">
-
-                            <li class="{{ request()->is('/')  }}">
+                            <li>
                                 <a href="{{ url('/') }}">Home</a>
                             </li>
-
-                            <li class="{{ request()->is('products*')  }}">
-                                <a onclick="scrollWin()">Our Services</a>
+                            <li>
+                                <a class="text-light" onclick="scrollWin()">Our Services</a>
                             </li>
-
                             <li class="{{ request()->is('blog*')  }}">
-                                <a onclick="scrollWin2()">About Us</a>
+                                <a class="text-light" onclick="scrollWin2()">About Us</a>
                             </li>
-
                             <li class="{{ request()->is('about*')  }}">
-                                <a onclick="scrollWin3()">Contact Us</a>
+                                <a class="text-light" onclick="scrollWin3()">Contact Us</a>
                             </li>
-
                             <li class="{{ request()->is('login*')  }}">
                                 <a href="{{ url('/login') }}">Login</a>
                             </li>
-
                         </ul>
                     </nav>
                 </div>
-
-
-                <!-- Header Icon -->
                 <div class="header-icons">
-                    <!-- <a href="#" class="header-wrapicon1 dis-block">
+                    <!-- <a class="text-light" class="header-wrapicon1 dis-block">
                     <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
                 </a> -->
-
-
                     <!-- <div class="header-wrapicon2">
                     <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
                     <span class="header-icons-noti">0</span> -->
-
-                    <!-- Header cart noti -->
-
                 </div>
             </div>
             <div class="redLine col-lg-12">
             </div>
         </div>
-
-        <!-- Header Mobile -->
         <div class="wrap_header_mobile">
-            <!-- Logo moblie -->
             <a href="index.php" class="logo-mobile">
                 <img src="{{ asset('assets/images/icons/logo.png') }}" alt="IMG-LOGO">
             </a>
-
-            <!-- Button show menu -->
             <div class="btn-show-menu">
-                <!-- Header Icon mobile -->
                 <div class="header-icons-mobile">
-                    <!-- <a href="#" class="header-wrapicon1 dis-block">
+                    <!-- <a class="text-light" class="header-wrapicon1 dis-block">
                     <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
                 </a> -->
-
                     <span class="linedivide2"></span>
-
                     <div class="header-wrapicon2">
                         <!-- <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
                     <span class="header-icons-noti">0</span> -->
-
-                        <!-- Header cart noti -->
-
                     </div>
                 </div>
-
                 <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
@@ -120,30 +87,24 @@
                 </div>
             </div>
         </div>
-
-        <!-- Menu Mobile -->
         <div class="wrap-side-menu">
             <nav class="side-menu">
                 <ul class="main-menu">
-                        <li class="{{ request()->is('/')  }} item-menu-mobile">
-                                <button><a href="{{ url('/') }}" class="text-light">Home</a></button>
-                            </li>
-
-                            <li class="{{ request()->is('products*')  }} item-menu-mobile">
-                                <button onclick="scrollWin()">Our Services</button>
-                            </li>
-
-                            <li class="{{ request()->is('blog*')  }} item-menu-mobile">
-                                <button onclick="scrollWin2()">About Us</button>
-                            </li>
-
-                            <li class="{{ request()->is('about*')  }} item-menu-mobile">
-                                <button onclick="scrollWin3()">Contact Us</button>
-                            </li>
-
-                            <li class="{{ request()->is('login*')  }} item-menu-mobile">
-                                <button href="{{ url('/login') }}">Login</button>
-                            </li>
+                    <li class="item-menu-mobile">
+                        <button><a href="{{ url('/') }}" class="text-light">Home</a></button>
+                    </li>
+                    <li class="item-menu-mobile">
+                        <button onclick="scrollWin()">Our Services</button>
+                    </li>
+                    <li class="item-menu-mobile">
+                        <button onclick="scrollWin2()">About Us</button>
+                    </li>
+                    <li class="item-menu-mobile">
+                        <button onclick="scrollWin3()">Contact Us</button>
+                    </li>
+                    <li class="item-menu-mobile">
+                        <button href="{{ url('/login') }}">Login</button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -151,7 +112,6 @@
 
     @yield("content")
 
-    <!-- Footer -->
     <footer class="bg-dark pt-4 text-white">
         <div class="text-center pb-5 mt-3" style="border-bottom: 5px solid #f44336">
             <h1 class="mb-3">HUBUNGI KAMI</h1>
@@ -197,9 +157,6 @@
         </span>
     </div>
 
-    <!-- Container Selection1 -->
-    <div id="dropDownSelect1"></div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/vendor/animsition/js/animsition.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -234,25 +191,22 @@
             dropdownParent: $('#dropDownSelect1')
         });
 
+        function scrollWin() {
+            var elmnt = document.getElementById("ourservice");
+            elmnt.scrollIntoView();
+        }
+
+        function scrollWin2() {
+            var elmnt = document.getElementById("about");
+            elmnt.scrollIntoView();
+        }
+
+        function scrollWin3() {
+            var elmnt = document.getElementById("contact");
+            elmnt.scrollIntoView();
+        }
+
     </script>
-        <script>
-            function scrollWin() {
-                var elmnt = document.getElementById("ourservice");
-                elmnt.scrollIntoView();
-            }
-
-            function scrollWin2() {
-                var elmnt = document.getElementById("about");
-                elmnt.scrollIntoView();
-            }
-
-            function scrollWin3() {
-                var elmnt = document.getElementById("contact");
-                elmnt.scrollIntoView();
-            }
-
-            </script>
-   
     <script src="{{ asset('assets/js/main.js') }}"></script>
     @stack('js')
 </body>
