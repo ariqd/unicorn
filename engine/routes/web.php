@@ -11,11 +11,11 @@
 |
 */
 Route::prefix('api/v1')->group(function () {
-Route::post("userregis","ApiController@userRegis");
-Route::post("userktp/{id}","ApiController@userUpdateKTP");
-Route::get("coba","ApiController@getAllDriver");
-Route::get("loginapi","ApiController@login");
-Route::get("logindetails/{id}","ApiController@getUserDetail");
+    Route::post("userregis", "ApiController@userRegis");
+    Route::post("userktp/{id}", "ApiController@userUpdateKTP");
+    Route::get("coba", "ApiController@getAllDriver");
+    Route::get("loginapi", "ApiController@login");
+    Route::get("logindetails/{id}", "ApiController@getUserDetail");
 });
 
 Route::get('/', function () {
@@ -26,18 +26,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/register-user', 'Auth\RegisterController@viewRegisterUser');
-Route::get('/register-partner', 'Auth\RegisterController@viewRegisterPartner');
+Route::get('/register-user', 'Auth\RegisterUserController@index');
+Route::post('/register-user', 'Auth\RegisterUserController@store');
+
+Route::get('/register-partner', 'Auth\RegisterPartnerController@index');
+Route::post('/register-partner', 'Auth\RegisterPartnerController@store');
 
 Route::middleware('admin')->group(function () {
     Route::get('/admin', 'Admin\HomeController@index')->name('admin.home');
     Route::resource('/admin/drivers', 'Admin\DriverController');
-    Route::resource('/admin/bids','Admin\BidController');
-    Route::resource('/admin/shipments','Admin\ShipmentController');
+    Route::resource('/admin/bids', 'Admin\BidController');
+    Route::resource('/admin/shipments', 'Admin\ShipmentController');
     Route::resource('/admin/pengiriman', 'Admin\SendShipmentController');
     Route::resource('/admin/truk', 'Admin\TruckController');
-    //Route::get('/admin/pengiriman/sedangdikirim', 'Admin\KirimController@sedangdikirim');
-    //Route::get('/admin/truk', 'Admin\TrukController@index');
     Route::get('/admin/pengguna/belumdiproses', 'Admin\PenggunaController@index');
     Route::get('/admin/pengguna/disetujui', 'Admin\PenggunaController@index');
     Route::get('/admin/pengguna/ditolak', 'Admin\PenggunaController@index');
