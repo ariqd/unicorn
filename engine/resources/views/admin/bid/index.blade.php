@@ -48,8 +48,7 @@ Driver
                                 <td>Tunggu API_KEY MAPS</td>
                                 <td>Tunggu API_KEY MAPS</td>
                                 <td>Tunggu API_KEY MAPS</td>
-                                <td>{{$item->idTruck[0]->size}} tidak ada isian ini truck jenis apa, cuma size /
-                                    capacity</td>
+                                <td>{{$item->idTruck[0]->size}}</td> {{-- tidak ada isian ini truck jenis apa, cuma size / capacity --}}
                                 <td style="">{{"Rp. ".number_format($item->budget)}}</td>
                                 <td><button type="button" class="btn btn-dark" data-toggle="modal"
                                         data-target="#sudahbid">Sudah Bid</button></td>

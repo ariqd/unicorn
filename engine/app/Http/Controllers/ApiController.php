@@ -32,7 +32,7 @@ class ApiController extends Controller
         $data = [
             "name"=>$request["name"],
             "username"=>$request["username"],
-            "paswword"=>$request["password"],
+            "password"=>$request["password"],
             "telephone"=>$request["telephone"],
             "profilePic"=>$request->file('profile')
         ];

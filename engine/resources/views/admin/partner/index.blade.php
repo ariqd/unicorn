@@ -10,7 +10,6 @@ Partner - Belum Diproses
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#daftarpengguna"></button>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-stripped">
