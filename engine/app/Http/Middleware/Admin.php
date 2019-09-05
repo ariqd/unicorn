@@ -16,7 +16,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->status == 'admin')
+        if ($request->session()->has('user') && $request->session()->has('token'))
             return $next($request);
 
         return redirect('/login');

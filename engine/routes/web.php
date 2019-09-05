@@ -11,14 +11,15 @@
 |
 */
 Route::prefix('api/v1')->group(function () {
-Route::post("userregis","ApiController@userRegis");
-Route::post("userktp/{id}","ApiController@userUpdateKTP");
-Route::get("coba","ApiController@getAllDriver");
-Route::post("loginapi","ApiController@login");
-Route::get("logindetails/{id}","ApiController@getUserDetail");
+    Route::post("userregis", "ApiController@userRegis");
+    Route::post("userktp/{id}", "ApiController@userUpdateKTP");
+    Route::get("coba", "ApiController@getAllDriver");
+    Route::post("loginapi", "ApiController@login");
+    Route::get("logindetails/{id}", "ApiController@getUserDetail");
 });
 
 Route::get('/', function () {
+    // dd(session()->all());
     return view('index');
 });
 
@@ -31,6 +32,7 @@ Route::post('/register-user', 'Auth\RegisterUserController@store');
 
 Route::get('/register-partner', 'Auth\RegisterPartnerController@index');
 Route::post('/register-partner', 'Auth\RegisterPartnerController@store');
+Route::get('logout', 'Auth\LoginController@logout');
 
 Route::middleware('admin')->group(function () {
     Route::get('/admin', 'Admin\HomeController@index')->name('admin.home');

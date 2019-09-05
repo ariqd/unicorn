@@ -47,9 +47,15 @@
                             <li>
                                 <a class="text-light" onclick="scrollWin3()">Contact Us</a>
                             </li>
-                            <li>
+                            @if (session()->has('user'))
+                            <li class="{{ request()->is('login*')  }}">
+                                <a href="{{ url('/login') }}">Admin</a>
+                            </li>
+                            @else
+                            <li class="{{ request()->is('login*')  }}">
                                 <a href="{{ url('/login') }}">Login</a>
                             </li>
+                            @endif
                         </ul>
                     </nav>
                 </div>
