@@ -51,16 +51,16 @@
                         aria-haspopup="true" aria-expanded="false">
                         <img src="{{ asset('carbon/imgs/avatar-1.png') }}" class="avatar avatar-sm" alt="logo">
                         <span class="small ml-1 d-md-down-none"></span>
-                        {{ auth()->user()->name }}
+                        {{ session()->get('user')->name }}
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#" class="dropdown-item btnLogout">
+                        <a href="{{ url('logout') }}" class="dropdown-item">
                             <i class="fa fa-lock"></i> Logout
                         </a>
-                        <form class="hidden" id="formLogout" action="{{ url('logout') }}" method="post">
+                        {{-- <form class="hidden" id="formLogout" action="{{ url('logout') }}" method="post">
                             @csrf
-                        </form>
+                        </form> --}}
                     </div>
                 </li>
             </ul>
