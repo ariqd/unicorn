@@ -14,8 +14,10 @@ class RegisterPartnerController extends Controller
 
     public function store(Request $request) 
     {
-        $request->all()->dd();
+        dd($request->all());
 
-        // return "store";
+        $this->post('partner', $request->all());
+
+        return redirect('login')->with('info', 'Pendaftaran Partner Berhasil!');
     }
 }

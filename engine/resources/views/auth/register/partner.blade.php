@@ -8,7 +8,7 @@
                 <div class="card-header bg-dark text-white text-center">Pendaftaran Partner</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ url('register-partner') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -118,11 +118,10 @@
                             </div>
                         </div>
 
-
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-dark rounded-0">
-                                    Simpan Informasi Pendaftaran
+                                <button type="submit" class="btn btn-danger rounded-0">
+                                    Submit
                                 </button>
                             </div>
                         </div>
