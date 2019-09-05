@@ -15,7 +15,7 @@ class ApiController extends Controller
     {
         $data = [
             "username" => $request["username"],
-            "password" => $request["password"],
+            "password" => $request["password"]
         ];
         dd($this->post("users_login", $data));
     }

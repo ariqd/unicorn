@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use GuzzleHttp\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -45,4 +46,28 @@ class LoginController extends Controller
 
         return redirect('/')->with('login-success', 'You are logged in!');
     }
+
+    public function login(Request $request) {
+       $client = new Client(['headers' => [
+           'Content-Type' => 'application/json'
+       ]]);
+       $input = $request->all();
+       unset($input["_token"]);
+       try {
+           $response = $client->post("http://makayasaareca.com:50855/api/" . "users_login", [
+               'json' => $input
+           ]);
+
+       } catch (Exception $e) {
+           return redirect()->back()->withInput($request->all())->with('warning', 'Login failed! Something Wrong');
+       }
+       if ($response->getStatusCode() != 200) {
+           return redirect('/login')->with('warning', 'Login failed! Wrong Email/Password');
+       }
+       $response = json_decode($response->getBody()->getContents());
+       //$request->session()->put('token', $response->token);
+       //$request->session()->put('user', $response->user);
+       dd($response->getStatusCode());
+       return redirect("admin");
+   }
 }

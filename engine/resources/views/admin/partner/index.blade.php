@@ -24,11 +24,11 @@ Partner - Belum Diproses
                         <tbody>
                             {{-- @foreach($data as $item) --}}
                             <tr>
-                                <td>1</td>
-                                <td>testing</td>
-                                <td>abc</td>
-                                <td>11223344556677</td>
-                                <td>a@a.com</td>
+                                <td>{{-- $loop->iteration --}} 1</td>
+                                <td>{{-- $item->name --}} testing</td>
+                                <td>{{-- $item->org --}} hardcode</td>
+                                <td>{{-- $item->ktp --}} 94613184613999</td>
+                                <td>{{-- $item->email --}} a@c.com</td>
                                 <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detail</button></td>
                             </tr>
                             {{-- @endforeach --}}
@@ -53,28 +53,28 @@ Partner - Belum Diproses
                 <form>
                         <div class="form-group form-group-default">
                             <label>Email</label>
-                            <input type="text" class="form-control" readonly>
+                            <input type="text" class="form-control" value="a@c.com" readonly>
                         </div>
 
                         <div class="form-group form-group-default">
                             <label>Kata Sandi</label>
-                            <input type="text" class="form-control" readonly>
+                            <input type="password" class="form-control" value="12345678" readonly>
                         </div>
                         <div class="form-group form-group-default">
                             <label>Nama</label>
-                            <input type="text" class="form-control" readonly>
+                            <input type="text" class="form-control" value="testing" readonly>
                         </div>
                         <div class="form-group form-group-default">
                             <label>No. KTP</label>
-                            <input type="text" class="form-control" readonly>
+                            <input type="text" class="form-control" value="946131841613999" readonly>
                         </div>
                         <div class="form-group form-group-default">
                             <label>Kantor/Organisasi</label>
-                            <input type="text" class="form-control" readonly>
+                            <input type="text" class="form-control" value="hardcode" readonly>
                         </div>
                         <div class="form-group form-group-default">
                             <label>No. HP</label>
-                            <input type="text" class="form-control" readonly>
+                            <input type="text" class="form-control" value="976431" readonly>
                         </div>
                         <div class="form-group form-group-default">
                             <label>Foto KTP</label>

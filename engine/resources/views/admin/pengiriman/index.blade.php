@@ -49,12 +49,12 @@ Pengiriman - Belum Dikirim
                         <tbody>
                             {{-- @foreach($data as $item) --}}
                             <tr>
-                                <td>1</td>
-                                <td>Bandung - Jakarta</td>
-                                <td>Gudang Bandung</td>
-                                <td>Gudang Jakarta</td>
-                                <td>Box</td>
-                                <td>Rp 120.000,-</td>
+                                <td>{{-- $loop->iteration --}} 1</td>
+                                <td>{{-- $item->route --}} Bandung - Jakarta</td>
+                                <td>{{-- $item->ambil --}} Bandung</td>
+                                <td>{{-- $item->tujuan --}} Jakarta</td>
+                                <td>{{-- $item->size --}} 10</td>
+                                <td>{{-- "Rp. ".number_format($item->fee)-- }} Rp 200.000,-</td>
                                 <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Kirim</button></td>
                             </tr>
                             {{-- @endforeach --}}

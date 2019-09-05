@@ -37,19 +37,19 @@ Driver
                             <th>Rute</th>
                             <th>Ambil Muatan</th>
                             <th>Tujuan Muatan</th>
-                            <th>Jenis Truk</th>
+                            <th>Size</th>
                             <th>Budget</th>
                             <th></th>
                         </thead>
                         <tbody>
                             @foreach($data as $item)
                             <tr>
-                                <td>{{ $loop->iteration }}</td>
+                                <td>{{-- $loop->iteration --}} 1</td>
                                 <td>Tunggu API_KEY MAPS</td>
                                 <td>Tunggu API_KEY MAPS</td>
                                 <td>Tunggu API_KEY MAPS</td>
-                                <td>{{$item->idTruck[0]->size}}</td> {{-- tidak ada isian ini truck jenis apa, cuma size / capacity --}}
-                                <td style="">{{"Rp. ".number_format($item->budget)}}</td>
+                                <td>{{-- $item->idTruck[0]->size --}} 30</td> {{-- tidak ada isian ini truck jenis apa, cuma size / capacity --}}
+                                <td style="">{{-- "Rp. ".number_format($item->budget) --}} Rp 100.000.-</td>
                                 <td><button type="button" class="btn btn-dark" data-toggle="modal"
                                         data-target="#sudahbid">Sudah Bid</button></td>
                             </tr>
