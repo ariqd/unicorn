@@ -74,9 +74,4 @@ class RegisterController extends Controller
     {
         return view('auth.register.user');
     }
-
-    public function viewRegisterPartner() 
-    {
-        return view('auth.register.partner');
-    }
 }

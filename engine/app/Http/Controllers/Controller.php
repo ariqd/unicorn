@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
-use Illuminate\Foundation\Bus\DispatchesJobs;
+// use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+// use Illuminate\Foundation\Validation\ValidatesRequests;
+// use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
@@ -39,7 +39,9 @@ class Controller extends BaseController
 
 	public function post($url, $data)
 	{
+		unset($data["_token"]);
 		$response = $this->client()->post($url, ["json" => $data]);
+		
 		return json_decode($response->getBody())->data;
 	}
 
