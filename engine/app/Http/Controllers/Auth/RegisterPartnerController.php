@@ -14,8 +14,27 @@ class RegisterPartnerController extends Controller
 
     public function store(Request $request) 
     {
-        $this->post('partner', $request->all());
+        $input = $request->all();
 
-        return redirect('login')->with('info', 'Pendaftaran Partner Berhasil!');
+        $validator = Validator::make($input, [
+            'password' => 'required|string|min:6|confirmed',
+            'ktp_foto' => 'required|image|mimes:jpeg,jpg,png|max:2048',
+            'ktp_selfie' => 'required|image|mimes:jpeg,jpg,png|max:2048'
+        ]);
+
+        if ($validator->fails())
+            return redirect()->back()->withInput()->withErrors($validator);
+
+        $ktp_foto = $input['ktp_foto'];
+        $ktp_selfie = $input['ktp_selfie'];
+        unset($input['ktp_foto']);
+        unset($input['ktp_selfie']);
+        unset($input['password_confirmation']);
+        $input['filename'] = '';
+        // dd($input);
+
+        $this->post('users', $input);
+
+        return redirect('/login')->with('info', 'Registrasi berhasil! Silahkan login');
     }
 }
