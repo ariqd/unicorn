@@ -49,8 +49,8 @@ class Controller extends BaseController
 
 	public function put($url, $data)
 	{
-		unset($data["_method"]);
-		unset($data["_token"]);
+		// unset($data["_method"]);
+		// unset($data["_token"]);
 		$response = $this->client()->put($url, ["json" => $data]);
 
 		return json_decode($response->getBody())->data;

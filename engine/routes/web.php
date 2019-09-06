@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 Route::prefix('api/v1')->group(function () {
     Route::post("userregis", "ApiController@userRegis");
     Route::post("userktp/{id}", "ApiController@userUpdateKTP");
@@ -19,7 +9,6 @@ Route::prefix('api/v1')->group(function () {
 });
 
 Route::get('/', function () {
-    // dd(session()->all());
     return view('index');
 });
 
@@ -35,16 +24,16 @@ Route::post('/register-partner', 'Auth\RegisterPartnerController@store');
 Route::get('logout', 'Auth\LoginController@logout');
 
 Route::middleware('admin')->group(function () {
-    Route::get('/admin', 'Admin\HomeController@index')->name('admin.home');
-    Route::resource('/admin/drivers', 'Admin\DriverController');
-    Route::resource('/admin/bids', 'Admin\BidController');
-    Route::resource('/admin/shipments', 'Admin\ShipmentController');
-    Route::resource('/admin/pengiriman', 'Admin\SendShipmentController');
-    Route::resource('/admin/truk', 'Admin\TruckController');
-    Route::get('/admin/pengguna/belumdiproses', 'Admin\PenggunaController@index');
-    Route::get('/admin/pengguna/disetujui', 'Admin\PenggunaController@index');
-    Route::get('/admin/pengguna/ditolak', 'Admin\PenggunaController@index');
-    Route::get('/admin/partner/belumdiproses', 'Admin\PartnerController@index');
-    Route::get('/admin/partner/disetujui', 'Admin\PartnerController@index');
-    Route::get('/admin/partner/ditolak', 'Admin\PartnerController@index');
+    Route::get('admin', 'Admin\HomeController@index')->name('admin.home');
+    Route::resource('admin/drivers', 'Admin\DriverController');
+    Route::resource('admin/bids', 'Admin\BidController');
+    Route::resource('admin/shipments', 'Admin\ShipmentController');
+    Route::resource('admin/pengiriman', 'Admin\SendShipmentController');
+    Route::resource('admin/truk', 'Admin\TruckController');
+    Route::get('admin/pengguna/belumdiproses', 'Admin\PenggunaController@index');
+    Route::get('admin/pengguna/disetujui', 'Admin\PenggunaController@index');
+    Route::get('admin/pengguna/ditolak', 'Admin\PenggunaController@index');
+    Route::get('admin/partner/belumdiproses', 'Admin\PartnerController@index');
+    Route::get('admin/partner/disetujui', 'Admin\PartnerController@index');
+    Route::get('admin/partner/ditolak', 'Admin\PartnerController@index');
 });

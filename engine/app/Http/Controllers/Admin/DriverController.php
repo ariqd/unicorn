@@ -14,7 +14,7 @@ class DriverController extends Controller
      */
     public function index()
     {
-        $drivers = $this->get('drivers');
+        $drivers = collect($this->get('drivers'))->sortByDesc('create_at');
 
         return view("admin.driver.index", ['data' => $drivers]);
     }
@@ -37,7 +37,9 @@ class DriverController extends Controller
      */
     public function store(Request $request)
     {
-        $this->post("drivers", $request->all());
+        $this->post("driversNoPhoto", $request->all());
+
+        return redirect('admin/drivers')->with('info', 'Driver ditambahkan!');
     }
 
     /**
@@ -75,7 +77,8 @@ class DriverController extends Controller
     public function update(Request $request, $id)
     {
         $this->put("drivers/$id", $request->all());
-        return redirect()->back();
+
+        return redirect()->back()->with('info', 'Driver berhasil ditambahkan!');
     }
 
     /**

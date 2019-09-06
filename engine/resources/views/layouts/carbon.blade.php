@@ -27,6 +27,7 @@
         .nav-link.active i {
             color: #8BC34A !important;
         }
+
     </style>
 </head>
 
@@ -59,7 +60,7 @@
                             <i class="fa fa-lock"></i> Logout
                         </a>
                         {{-- <form class="hidden" id="formLogout" action="{{ url('logout') }}" method="post">
-                            @csrf
+                        @csrf
                         </form> --}}
                     </div>
                 </li>
@@ -70,6 +71,39 @@
             @include("layouts.sidebar")
 
             <div class="content">
+
+                @if(@session('info'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong><i class="fa fa-info-circle"></i> Success!</strong> {!! @session('info') !!}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
+
+                @if(@session('warning'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong><i class="fa fa-exclamation-circle"></i> Warning!</strong> {{ @session('warning') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
+
+                @if(count($errors) > 0)
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong><i class="fa fa-exclamation-circle"></i> Please correct your input data :</strong>
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
+
                 @yield('content')
             </div>
         </div>
