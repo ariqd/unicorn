@@ -41,10 +41,10 @@
                             <li>
                                 <a class="text-light" onclick="scrollWin()">Our Services</a>
                             </li>
-                            <li class="{{ request()->is('blog*')  }}">
+                            <li>
                                 <a class="text-light" onclick="scrollWin2()">About Us</a>
                             </li>
-                            <li class="{{ request()->is('about*')  }}">
+                            <li>
                                 <a class="text-light" onclick="scrollWin3()">Contact Us</a>
                             </li>
                             @if (session()->has('user'))
