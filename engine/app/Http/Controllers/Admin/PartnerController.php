@@ -14,7 +14,9 @@ class PartnerController extends Controller
      */
     public function index()
     {
-        return view("admin.partner.index");
+        
+        $data = $this->get("partners/");
+        return view("admin.partner.index",compact("data"));
 
     }
 

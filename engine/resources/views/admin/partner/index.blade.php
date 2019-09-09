@@ -16,22 +16,20 @@ Partner - Belum Diproses
                         <thead>
                             <th>Line No.</th>
                             <th>Nama</th>
-                            <th>Organisasi</th>
-                            <th>No. KTP</th>
-                            <th>Email</th>
-                            <th>Action</th>
+                            <th>No. HP</th>
+                            <th>Alamat</th>
                         </thead>
                         <tbody>
-                            {{-- @foreach($data as $item) --}}
+                            
+                            @foreach($data as $item)
                             <tr>
-                                <td>{{-- $loop->iteration --}} 1</td>
-                                <td>{{-- $item->name --}} testing</td>
-                                <td>{{-- $item->org --}} hardcode</td>
-                                <td>{{-- $item->ktp --}} 94613184613999</td>
-                                <td>{{-- $item->email --}} a@c.com</td>
+                                <td>{{$loop->iteration}}</td>
+                                <td>{{$item->name}}</td>
+                                <td>{{$item->telephone}}</td>
+                                <td>{{$item->address}}</td>
                                 <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detail</button></td>
                             </tr>
-                            {{-- @endforeach --}}
+                             @endforeach 
                         </tbody>
                     </table>
                 </div>
