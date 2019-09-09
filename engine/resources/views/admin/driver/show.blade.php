@@ -10,10 +10,10 @@ Driver
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h2>Detail / Edit </h2>
+                    <h2>Detail </h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ @$edit ? url("driver/$data->_id") : url("driver")}}">
+                    <form method="POST" action="{{ @$edit ? url("admin/drivers/$data->_id") : url("driver")}}">
                         @csrf
                         @if(isset($edit))
                         @method("PUT")
@@ -39,7 +39,7 @@ Driver
                             <img src="#">
                             <input type="file" id="telephone" class="form-control" name="image">
                         </div>
-                        <input type="submit" class="btn btn-dark form-control" value="Submit">
+                        {{-- <input type="submit" class="btn btn-dark form-control" value="Submit"> --}}
                     </form>
                 </div>
             </div>
