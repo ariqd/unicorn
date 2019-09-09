@@ -18,7 +18,7 @@ class RegisterPartnerController extends Controller
         $input = $request->all();
 
         $validator = Validator::make($input, [
-            'email' => 'required',
+            // 'email' => 'required',
             'password' => 'required|string|min:6|confirmed',
             // 'ktp_foto' => 'required|image|mimes:jpeg,jpg,png|max:2048',
             // 'ktp_selfie' => 'required|image|mimes:jpeg,jpg,png|max:2048'
