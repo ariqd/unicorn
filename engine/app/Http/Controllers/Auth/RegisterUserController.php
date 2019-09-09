@@ -11,7 +11,6 @@ class RegisterUserController extends Controller
 {
     public function index()
     {
-        // dd($this->get('users'));
         return view('auth.register.user');
     }
 

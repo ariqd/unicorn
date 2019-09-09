@@ -43,7 +43,7 @@ class Controller extends BaseController
 	{
 		unset($data["_token"]);
 		$response = $this->client()->post($url, ["json" => $data]);
-		
+
 		return json_decode($response->getBody())->data;
 	}
 
@@ -59,7 +59,7 @@ class Controller extends BaseController
 	public function delete($url)
 	{
 		$response = $this->client()->delete($url);
-		
+
 		return json_decode($response->getBody());
 	}
 }
