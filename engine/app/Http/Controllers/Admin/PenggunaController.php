@@ -46,7 +46,9 @@ class PenggunaController extends Controller
      */
     public function show($id)
     {
-        //
+        $d['pengguna'] = 1;
+
+        return view('admin.pengguna.show', $d);
     }
 
     /**

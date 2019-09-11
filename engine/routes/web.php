@@ -24,6 +24,7 @@ Route::post('/register-partner', 'Auth\RegisterPartnerController@store');
 Route::get('logout', 'Auth\LoginController@logout');
 
 Route::middleware('admin')->group(function () {
+
     Route::get('admin', 'Admin\HomeController@index')->name('admin.home');
     Route::resource('admin/drivers', 'Admin\DriverController');
     Route::resource('admin/bids', 'Admin\BidController');
@@ -36,4 +37,6 @@ Route::middleware('admin')->group(function () {
     Route::get('admin/partner/belumdiproses', 'Admin\PartnerController@index');
     Route::get('admin/partner/disetujui', 'Admin\PartnerController@index');
     Route::get('admin/partner/ditolak', 'Admin\PartnerController@index');
+    Route::resource('admin/pengguna', 'Admin\PenggunaController');
+   
 });

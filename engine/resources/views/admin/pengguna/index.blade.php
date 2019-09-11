@@ -5,6 +5,8 @@ Pengguna - Belum Diproses
 @endsection
 
 @section('content')
+@include('layouts.ajax')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -29,7 +31,11 @@ Pengguna - Belum Diproses
                                 <td>{{-- $item->org --}} hardcode</td>
                                 <td>{{-- $item->ktp --}} 11223344556677</td>
                                 <td>{{-- $item->email --}} a@b.com</td>
-                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detail</button></td>
+                                <td>
+                                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detail</button> -->
+                                <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/pengguna'.'/1')}}"
+                                    class="btn btn-light btn-sm m-1">Detail</a>
+                                </td>
                             </tr>
                             {{-- @endforeach --}}
                         </tbody>
