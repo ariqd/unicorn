@@ -49,7 +49,8 @@ class PartnerController extends Controller
      */
     public function show($id)
     {
-        //
+        $partner = $this->get("partners/$id");
+        return view('admin.partner.show', compact("partner"));
     }
 
     /**

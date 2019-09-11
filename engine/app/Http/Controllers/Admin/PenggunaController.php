@@ -14,7 +14,8 @@ class PenggunaController extends Controller
      */
     public function index()
     {
-        return view("admin.pengguna.index");
+        $data = $this->get("users");
+        return view("admin.pengguna.index",compact("data"));
     }
 
     /**
@@ -46,9 +47,8 @@ class PenggunaController extends Controller
      */
     public function show($id)
     {
-        $d['pengguna'] = 1;
-
-        return view('admin.pengguna.show', $d);
+        $pengguna = $this->get("users/$id");
+        return view('admin.pengguna.show', compact("pengguna"));
     }
 
     /**

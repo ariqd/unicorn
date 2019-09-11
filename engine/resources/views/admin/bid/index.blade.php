@@ -42,7 +42,7 @@ Driver
                             <th></th>
                         </thead>
                         <tbody>
-                            @foreach($data as $item)
+                            {{-- @foreach($data as $item) --}}
                             <tr>
                                 <td>{{-- $loop->iteration --}} 1</td>
                                 <td>Tunggu API_KEY MAPS</td>
@@ -50,10 +50,11 @@ Driver
                                 <td>Tunggu API_KEY MAPS</td>
                                 <td>{{-- $item->idTruck[0]->size --}} 30</td> {{-- tidak ada isian ini truck jenis apa, cuma size / capacity --}}
                                 <td style="">{{-- "Rp. ".number_format($item->budget) --}} Rp 100.000.-</td>
-                                <td><button type="button" class="btn btn-dark" data-toggle="modal"
-                                        data-target="#sudahbid">Sudah Bid</button></td>
+                                <td>
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#sudahbid">Sudah Bid</button>
+                                </td>
                             </tr>
-                            @endforeach
+                            {{-- @endforeach --}}
                         </tbody>
                     </table>
                 </div>

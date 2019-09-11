@@ -51,7 +51,6 @@ Driver
                     <table class="table table-hover table-stripped" id="datatable">
                         <thead>
                             <th>No</th>
-                            <th>Profile Picture</th>
                             <th>Name</th>
                             <th>Username</th>
                             <th>Telephone</th>
@@ -61,7 +60,6 @@ Driver
                             @foreach($data as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>Gambar</td>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->username }}</td>
                                 <td>{{ $item->telephone }}</td>

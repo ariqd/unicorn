@@ -38,5 +38,5 @@ Route::middleware('admin')->group(function () {
     Route::get('admin/partner/disetujui', 'Admin\PartnerController@index');
     Route::get('admin/partner/ditolak', 'Admin\PartnerController@index');
     Route::resource('admin/pengguna', 'Admin\PenggunaController');
-   
+    Route::resource('admin/partner', 'Admin\PartnerController');
 });

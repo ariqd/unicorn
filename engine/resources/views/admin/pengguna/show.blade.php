@@ -6,42 +6,23 @@
 </div>
 <div class="modal-body">
     <div class="row">
-      
-    <form>
-                        <div class="form-group form-group-default">
-                            <label>Email</label>
-                            <input type="text" class="form-control" value="a@b.com" readonly>
-                        </div>
+        <div class="col-12">
+        <form>
+            <div class="form-group form-group-default">
+                <label>Nama</label>
+                <input type="text" class="form-control" value="{{$pengguna->name}}" readonly>
+            </div>
 
-                        <div class="form-group form-group-default">
-                            <label>Kata Sandi</label>
-                            <input type="password" class="form-control" value="12345" readonly>
-                        </div>
-                        <div class="form-group form-group-default">
-                            <label>Nama</label>
-                            <input type="text" class="form-control" value="test" readonly>
-                        </div>
-                        <div class="form-group form-group-default">
-                            <label>No. KTP</label>
-                            <input type="text" class="form-control" value="11223344556677" readonly>
-                        </div>
-                        <div class="form-group form-group-default">
-                            <label>Kantor/Organisasi</label>
-                            <input type="text" class="form-control" value="hardcode" readonly>
-                        </div>
-                        <div class="form-group form-group-default">
-                            <label>No. HP</label>
-                            <input type="text" class="form-control" value="12345678" readonly>
-                        </div>
-                        <div class="form-group form-group-default">
-                            <label>Foto KTP</label>
-                            <input type="text" class="form-control" readonly>
-                        </div>
-                        <div class="form-group form-group-default">
-                            <label>Selfie dengan KTP</label>
-                            <input type="text" class="form-control" readonly>
-                        </div>
-                    </form>
+            <div class="form-group form-group-default">
+                <label>Username</label>
+                <input type="text" class="form-control" value="{{$pengguna->username}}" readonly>
+            </div>
+            <div class="form-group form-group-default">
+                <label>Telepon</label>
+                <input type="text" class="form-control" value="{{$pengguna->telephone}}" readonly>
+            </div>
+        </form>
+    </div>
     </div>
 </div>
 <div class="modal-footer">
