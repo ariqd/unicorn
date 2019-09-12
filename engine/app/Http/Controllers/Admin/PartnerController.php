@@ -73,7 +73,8 @@ class PartnerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->put("partnersverify/$id",[]);
+        return redirect()->back();
     }
 
     /**

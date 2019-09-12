@@ -7,25 +7,28 @@
 <div class="modal-body">
     <div class="row">
         <div class="col-12">
-        <form>
-            <div class="form-group form-group-default">
-                <label>Nama</label>
-                <input type="text" class="form-control" value="{{$pengguna->name}}" readonly>
-            </div>
+            <form action="{{ url('admin/pengguna'.'/'.$pengguna->_id) }}" method="POST">
+                @csrf
+                @method('PUT')
+                <div class="form-group form-group-default">
+                    <label>Nama</label>
+                    <input type="text" class="form-control" value="{{$pengguna->name}}" readonly>
+                </div>
 
-            <div class="form-group form-group-default">
-                <label>Username</label>
-                <input type="text" class="form-control" value="{{$pengguna->username}}" readonly>
-            </div>
-            <div class="form-group form-group-default">
-                <label>Telepon</label>
-                <input type="text" class="form-control" value="{{$pengguna->telephone}}" readonly>
-            </div>
-        </form>
-    </div>
+                <div class="form-group form-group-default">
+                    <label>Username</label>
+                    <input type="text" class="form-control" value="{{$pengguna->username}}" readonly>
+                </div>
+                <div class="form-group form-group-default">
+                    <label>Telepon</label>
+                    <input type="text" class="form-control" value="{{$pengguna->telephone}}" readonly>
+                </div>
+                @if($pengguna->activation == 0)
+                    <button type="submit" class="btn btn-success">Setujui Pendaftaran</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tolak Pendaftaran</button>
+                @endif
+            </form>
+        </div>
     </div>
 </div>
-<div class="modal-footer">
-                <button type="button" class="btn btn-success">Setujui Pendaftaran</button>
-                <button type="button" class="btn btn-danger">Tolak Pendaftaran</button>
-            </div>
+            

@@ -7,7 +7,9 @@
 <div class="modal-body">
     <div class="row">
         <div class="col-12">
-            <form>
+            <form action="{{ url('admin/partner'.'/'.$partner->_id) }}" method="POST">
+                @csrf
+                @method('PUT')
                 <div class="form-group form-group-default">
                     <label>Nama</label>
                     <input type="text" class="form-control" value="{{$partner->name}}" readonly>
@@ -25,11 +27,11 @@
                     <label>Alamat</label>
                     <input type="text" class="form-control" value="{{$partner->address}}" readonly>
                 </div>
+                @if($pengguna->activation == 0)
+                    <button type="submit" class="btn btn-success">Setujui Pendaftaran</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tolak Pendaftaran</button>
+                @elseif
             </form>
         </div>
     </div>
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-success">Setujui Pendaftaran</button>
-    <button type="button" class="btn btn-danger">Tolak Pendaftaran</button>
 </div>

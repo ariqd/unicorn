@@ -19,6 +19,7 @@ Partner - Belum Diproses
                             <th>Nama</th>
                             <th>No. HP</th>
                             <th>Alamat</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </thead>
                         <tbody>
@@ -28,6 +29,11 @@ Partner - Belum Diproses
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->telephone}}</td>
                                 <td>{{$item->address}}</td>
+                                @if($item->activation == 1)
+                                    <td>Disetujui</td>
+                                @else
+                                    <td>Belum Disetujui</td>
+                                @endif
                                 <td>
                                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detail</button> -->
                                     <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/partner'.'/'.$item->_id)}}"

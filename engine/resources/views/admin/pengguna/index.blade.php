@@ -20,6 +20,7 @@ Pengguna - Belum Diproses
                             <th>Nama</th>
                             <th>Username</th>
                             <th>Telepon</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </thead>
                         <tbody>
@@ -29,6 +30,11 @@ Pengguna - Belum Diproses
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->username }} </td>
                                 <td>{{ $item->telephone }} </td>
+                                @if($item->activation == 1)
+                                    <td>Disetujui</td>
+                                @else
+                                    <td>Belum Disetujui</td>
+                                @endif
                                 <td>
                                 <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detail</button> -->
                                 <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/pengguna'.'/'.$item->_id)}}"

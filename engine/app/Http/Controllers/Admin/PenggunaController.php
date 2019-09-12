@@ -71,7 +71,8 @@ class PenggunaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->put("usersverify/$id",[]);
+        return redirect()->back();
     }
 
     /**
