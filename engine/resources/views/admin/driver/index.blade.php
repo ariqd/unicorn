@@ -42,7 +42,7 @@ Driver
         <div class="col-12">
             <h1>
                 Drivers
-                <a href="{{ url('admin/drivers/create') }}" class="btn btn-danger ml-3">Tambah Driver</a>
+                <a href="{{ url('admin/drivers/create') }}" class="btn btn-success ml-3">Tambah Driver</a>
             </h1>
         </div>
         <div class="col-md-12">
@@ -71,11 +71,13 @@ Driver
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-right">
                                             <a href="{{ url('admin/drivers/'.$item->_id) }}" class="dropdown-item">
-                                                <i class="fa fa-eye"></i> Detail</a>
-                                            <form action="{{ url('drivers/'.$item->_id) }}" method="post"
+                                                <i class="fa fa-eye"></i> Detail/Edit</a>
+                                                <a href="#" class="dropdown-item btnDelete">
+                                                <i class="fa fa-trash"></i> Delete</a>
+                                            <form action="{{ url('admin/drivers/'.$item->_id) }}" method="post"
                                                 class="formDelete d-none">
-                                                {!! csrf_field() !!}
-                                                {!! method_field('delete') !!}
+                                                @csrf
+                                                @method('delete')
                                             </form>
                                         </div>
                                     </div>

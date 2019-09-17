@@ -85,6 +85,7 @@ class PartnerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->delete('partners/$id');
+        return redirect()->back();
     }
 }

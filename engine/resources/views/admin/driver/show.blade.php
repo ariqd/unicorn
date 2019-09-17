@@ -38,9 +38,12 @@ Driver
                             <img src="{{ $data->profile }}">
                             <input type="file" id="telephone" class="form-control" name="image">
                         </div>
-                        {{-- <input type="submit" class="btn btn-dark form-control" value="Submit"> --}}
-                    </form>
                 </div>
+                {{-- <div class="card-footer">
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                    <button type="button" class="btn btn-danger">Hapus Driver</button>
+                </div> --}}
+                </form>
             </div>
         </div>
     </div>

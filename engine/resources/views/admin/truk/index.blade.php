@@ -9,8 +9,9 @@ Pengaturan Truk
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"></div>
-
+                <div class="card-header">
+                    <h2>Pengaturan Truk</h2>
+                </div>
                 <div class="card-body">
                     <table class="table table-bordered table-stripped">
                         <thead>
@@ -19,7 +20,6 @@ Pengaturan Truk
                             <th>Tipe Truk</th>
                             <th>Kategori Truk</th>
                             <th>Driver</th>
-                            <th></th>
                             <th></th>
                         </thead>
                         <tbody>
@@ -30,8 +30,7 @@ Pengaturan Truk
                                 <td>Fuso</td>
                                 <td>Box</td>
                                 <td>Test</td>
-                                <td><button type="submit" class="btn btn-primary">Lacak</button></td>
-                                <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Kirim</button></td>
+                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Kirim</button></td>
                             </tr>
                             {{-- @endforeach --}}
                         </tbody>
@@ -70,7 +69,9 @@ Pengaturan Truk
                         <label>Driver</label>
                         <select>
                             <option value="---">---</option>
-                            <option value="Test">Test</option>
+                            @foreach($data as $item)
+                                <option value="{{$item->_id}}">{{$item->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </form>

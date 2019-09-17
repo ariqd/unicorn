@@ -83,6 +83,7 @@ class PenggunaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->delete("users/$id");
+        return redirect()->back();
     }
 }
