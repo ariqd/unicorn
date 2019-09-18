@@ -5,6 +5,8 @@ Pengiriman - Sedang Dikirim
 @endsection
 
 @section('content')
+@include('layouts.ajax')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -55,7 +57,10 @@ Pengiriman - Sedang Dikirim
                                 <td>Gudang Jakarta</td>
                                 <td>Box</td>
                                 <td>Rp 200.000,-</td>
-                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Lacak</button></td>
+                                <td>
+                                    <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/shipments/-6.9214/107.6088/tracking') }}" class="dropdown-item">
+                                        <i class="fa fa-magnifier"></i> Lacak</a>
+                                </td>
                             </tr>
                             {{-- @endforeach --}}
                         </tbody>
@@ -65,7 +70,7 @@ Pengiriman - Sedang Dikirim
         </div>
     </div>
 </div>
-
+{{--
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -76,9 +81,9 @@ Pengiriman - Sedang Dikirim
                 </button>
             </div>
             <div class="modal-body">
-                
+
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection

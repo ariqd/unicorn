@@ -82,4 +82,11 @@ class ShipmentController extends Controller
     {
         //
     }
+
+    public function tracking($lat, $long)
+    {
+        $d["coord"] = $lat.",".$long;
+        return view("admin.pengiriman.maps", $d);
+
+    }
 }

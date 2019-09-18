@@ -15,6 +15,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/maps', function () {
+    return view('layouts.maps');
+});
 
 Route::get('/register-user', 'Auth\RegisterUserController@index');
 Route::post('/register-user', 'Auth\RegisterUserController@store');
@@ -26,6 +29,8 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::middleware('admin')->group(function () {
 
     Route::get('admin', 'Admin\HomeController@index')->name('admin.home');
+    Route::get('admin/shipments/{lat}/{long}/tracking', 'Admin\ShipmentController@tracking');
+
     Route::resource('admin/drivers', 'Admin\DriverController');
     Route::resource('admin/bids', 'Admin\BidController');
     Route::resource('admin/shipments', 'Admin\ShipmentController');
