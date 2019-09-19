@@ -14,7 +14,8 @@ class SendShipmentController extends Controller
      */
     public function index()
     {
-        return view('admin.pengiriman.index');
+        $sedangdikirim = $this->get('orders');
+        return view('admin.pengiriman.index', compact('sedangdikirim'));
     }
 
     /**

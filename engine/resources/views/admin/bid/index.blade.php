@@ -34,27 +34,27 @@ Driver
                     <table class="table table-bordered table-stripped">
                         <thead>
                             <th>No</th>
-                            <th>Rute</th>
-                            <th>Ambil Muatan</th>
-                            <th>Tujuan Muatan</th>
-                            <th>Size</th>
+                            <th>Partner</th>
+                            <th>Driver</th>
                             <th>Budget</th>
                             <th></th>
                         </thead>
                         <tbody>
-                            {{-- @foreach($data as $item) --}}
+                            @foreach($data as $item)
                             <tr>
-                                <td>{{-- $loop->iteration --}} 1</td>
-                                <td>Tunggu API_KEY MAPS</td>
-                                <td>Tunggu API_KEY MAPS</td>
-                                <td>Tunggu API_KEY MAPS</td>
-                                <td>{{-- $item->idTruck[0]->size --}} 30</td> {{-- tidak ada isian ini truck jenis apa, cuma size / capacity --}}
-                                <td style="">{{-- "Rp. ".number_format($item->budget) --}} Rp 100.000.-</td>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>@foreach($item->partner as $item1)
+                                    {{ $item1->name }}
+                                </td>@endforeach
+                                <td>@foreach($item->driver as $item2)
+                                    {{ $item2->name }}
+                                </td>@endforeach
+                                <td style="">{{ "Rp. ".number_format($item->bidPrice) }}</td>
                                 <td>
                                     <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#sudahbid">Sudah Bid</button>
                                 </td>
                             </tr>
-                            {{-- @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

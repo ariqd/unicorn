@@ -46,7 +46,8 @@ class TruckController extends Controller
      */
     public function show($id)
     {
-        //
+        $truk = $this->get("users/$id");
+        return view('admin.truk.show', compact("truk"));
     }
 
     /**

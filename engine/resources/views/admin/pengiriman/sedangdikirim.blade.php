@@ -58,7 +58,7 @@ Pengiriman - Sedang Dikirim
                                 <td>Box</td>
                                 <td>Rp 200.000,-</td>
                                 <td>
-                                    <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/shipments/-6.9214/107.6088/tracking') }}" class="dropdown-item">
+                                    <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/shipments/-6.9665945/107.5378117/tracking') }}" class="btn btn-primary">
                                         <i class="fa fa-magnifier"></i> Lacak</a>
                                 </td>
                             </tr>
