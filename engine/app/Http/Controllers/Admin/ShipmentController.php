@@ -85,12 +85,13 @@ class ShipmentController extends Controller
         //
     }
 
-    public function tracking($lat, $long, $lat2, $long2)
+    public function tracking($id)
     {
-        $d["coord"] = $lat.",".$long;
-        $d["coord2"] = $lat2.",".$long2;
+        $dikirim = $this->get("orders/$id");
+        $d["coord"] = "-6.9214".","."107.6088".",".url('assets/driver.png');
+        $d["from"] = $dikirim->from->coordinates[0].",".$dikirim->from->coordinates[1].",".url('assets/from.png');
+        $d["to"] = $dikirim->to->coordinates[0].",".$dikirim->to->coordinates[1].",".url('assets/to.png');
         return view("admin.pengiriman.maps", $d);
-
     }
 
     /*public function mapper($lat, $long, $lat2, $long2)

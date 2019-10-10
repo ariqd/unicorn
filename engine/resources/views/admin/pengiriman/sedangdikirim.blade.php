@@ -3,7 +3,13 @@
 @section('title')
 Pengiriman - Sedang Dikirim
 @endsection
-
+@push('js')
+<script>
+    $("#maps").onsubmit(function(e){
+        e.preventDefault();
+    })
+</script>
+@endpush
 @section('content')
 @include('layouts.ajax')
 
@@ -54,19 +60,25 @@ Pengiriman - Sedang Dikirim
                                 <td>@foreach($item->driver as $item3) {{ $item3->name }} @endforeach</td>
                                 <td>{{ "Rp. ".number_format($item->budget).",-" }}</td>
                                 <td>
-                                    <!-- <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/shipments/-6.9665945/107.5378117/tracking') }}" class="btn btn-primary">
+                                    {{-- <!-- <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/shipments/-6.9665945/107.5378117/tracking') }}" class="btn btn-primary">
                                         <i class="fa fa-magnifier"></i> Lacak</a> -->
-                                    <form action="{{ url('admin/shipments/-6.9665945/107.5378117/-6.9665945/108.5378117/tracking') }}" method="GET">
+                                    <form id="maps"
+                                        action="{{ url('admin/shipments/-6.9665945/107.5378117/tracking') }}"
+                                        method="GET">
                                         <input type="hidden" name="lat-driver" value="">
                                         <input type="hidden" name="long-driver" value="">
-                                        <input type="hidden" name="lat-from" value="{{ $item->from->coordinates[0] }}">
-                                        <input type="hidden" name="long-from" value="{{ $item->from->coordinates[1] }}">
-                                        <input type="hidden" name="lat-to" value="{{ $item->to->coordinates[0] }}">
-                                        <input type="hidden" name="long-to" value="{{ $item->to->coordinates[1] }}">
+                                        <input type="hidden" name="latfrom" value="{{ $item->from->coordinates[0] }}">
+                                        <input type="hidden" name="longfrom" value="{{ $item->from->coordinates[1] }}">
+                                        <input type="hidden" name="latto" value="{{ $item->to->coordinates[0] }}">
+                                        <input type="hidden" name="longto" value="{{ $item->to->coordinates[1] }}">
+                                        <button type="submit" class="btn btn-primary"><i
+                                                class="fa fa-magnifier"></i>Lacak</button>
                                     </form>
-
-                                    <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/shipments/-6.9665945/107.5378117/-6.9665945/108.5378117/tracking') }}" class="btn btn-primary">
-                                        <i class="fa fa-magnifier"></i>Lacak</a>
+                                     --}}
+                                    <a href="#modalForm" data-toggle="modal"
+                                        data-href="{{ url('admin/shipments/'.$item->_id.'/tracking') }}"
+                                    class="btn btn-primary">
+                                    <i class="fa fa-magnifier"></i>Lacak</a>
                                 </td>
                             </tr>
                             @endforeach
