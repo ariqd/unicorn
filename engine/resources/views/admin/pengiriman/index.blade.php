@@ -39,29 +39,31 @@ Pengiriman - Belum Dikirim
                     <table class="table table-bordered table-stripped">
                         <thead>
                             <th>Line No.</th>
-                            <th>Rute</th>
                             <th>Ambil Muatan</th>
                             <th>Tujuan Muatan</th>
-                            <th>Jenis Truk</th>
-                            <th>Fee</th>
+                            <th>User</th>
+                            <th>Driver</th>
+                            <th>Produk</th>
+                            <th>Budget</th>
                             <th></th>
                         </thead>
                         <tbody>
-                            {{-- @foreach($data as $item) --}}
+                            @foreach($data as $item)
                             <tr>
-                                <td>{{-- $loop->iteration --}} 1</td>
-                                <td>{{-- $item->route --}} Bandung - Jakarta</td>
-                                <td>{{-- $item->ambil --}} Bandung</td>
-                                <td>{{-- $item->tujuan --}} Jakarta</td>
-                                <td>{{-- $item->size --}} 10</td>
-                                <td>{{-- "Rp. ".number_format($item->fee)-- }} Rp 200.000,-</td>
+                                <td>{{ $loop->iteration }} </td>
+                                <td>{{-- $item->from --}} Bandung</td>
+                                <td>{{-- $item->to --}} Jakarta</td>
+                                <td>@foreach($item->users as $item1) {{ $item1->name }} @endforeach</td>
+                                <td>@foreach($item->driver as $item2) {{ $item2->name }} @endforeach</td>
+                                <td>@foreach($item->product as $item3) {{ $item3->typename }} @endforeach</td>
+                                <td>{{ "Rp. ".number_format($item->budget).",-" }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Kirim</button>
-                                    <!-- <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/pengiriman'.'/'.$item->_id)}}"
-                                    class="btn btn-light btn-sm m-1">Kirim</a> -->
+                                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Kirim</button> -->
+                                    <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/pengiriman'.'/'.$item->_id)}}"
+                                    class="btn btn-light btn-sm m-1">Kirim</a>
                                 </td>
                             </tr>
-                            {{-- @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

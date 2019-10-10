@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Mapper;
 
 class ShipmentController extends Controller
 {
@@ -14,7 +15,8 @@ class ShipmentController extends Controller
      */
     public function index()
     {
-        return view("admin.pengiriman.sedangdikirim");
+        $dikirim = $this->get('orders');
+        return view("admin.pengiriman.sedangdikirim", ['data' => $dikirim]);
     }
 
     /**
@@ -83,10 +85,17 @@ class ShipmentController extends Controller
         //
     }
 
-    public function tracking($lat, $long)
+    public function tracking($lat, $long, $lat2, $long2)
     {
         $d["coord"] = $lat.",".$long;
+        $d["coord2"] = $lat2.",".$long2;
         return view("admin.pengiriman.maps", $d);
 
     }
+
+    /*public function mapper($lat, $long, $lat2, $long2)
+    {
+        Mapper::map(-6.9665945, 107.5378117);
+        return view("admin.pengiriman.maps");
+    }*/
 }
