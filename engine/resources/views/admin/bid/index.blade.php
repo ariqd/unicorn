@@ -34,7 +34,6 @@ Driver
                     <table class="table table-bordered table-stripped">
                         <thead>
                             <th>No</th>
-                            <th>Partner</th>
                             <th>Driver</th>
                             <th>Budget</th>
                             <th></th>
@@ -43,15 +42,14 @@ Driver
                             @foreach($data as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>@foreach($item->partner as $item1)
-                                    {{ $item1->name }}
-                                </td>@endforeach
-                                <td>@foreach($item->driver as $item2)
-                                    {{ $item2->name }}
-                                </td>@endforeach
+                                <td>@foreach($item->driver as $item2) {{ $item2->name }} @endforeach</td>
                                 <td style="">{{ "Rp. ".number_format($item->bidPrice) }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#sudahbid">Sudah Bid</button>
+                                    @if($item->status == 1)
+                                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#sudahbid">Sudah Bid</button>
+                                    @else
+                                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Bid</button>
+                                    @endif
                                 </td>
                             </tr>
                             @endforeach
