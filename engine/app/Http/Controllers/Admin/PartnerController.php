@@ -14,10 +14,20 @@ class PartnerController extends Controller
      */
     public function index()
     {
-        
         $data = $this->get("partners/");
-        return view("admin.partner.index",compact("data"));
+        return view("admin.partner.index", compact("data"));
+    }
 
+    public function verified()
+    {
+        $data = $this->get("partners/");
+        return view("admin.partner.verified", compact("data"));
+    }
+
+    public function unverified()
+    {
+        $data = $this->get("partners/");
+        return view("admin.partner.verified", compact("data"));
     }
 
     /**

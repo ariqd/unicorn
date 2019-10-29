@@ -19,7 +19,9 @@ Notifikasi
                             12 Juni 2019<br>
                             12.45</div>
                         <div class="col-11">Bpk/Ibu Suyono memposting permintaan pengiriman minuman rute Jakarta -
-                            Bandung</div>
+                            Bandung
+                            <a href="{{ url('admin/test') }}" class="btn btn-primary"><i class="fa fa-eye"></i> Test</a>
+                        </div>
                     </div>
                 </div>
             </div>

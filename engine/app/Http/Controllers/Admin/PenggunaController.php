@@ -15,7 +15,19 @@ class PenggunaController extends Controller
     public function index()
     {
         $data = $this->get("users");
-        return view("admin.pengguna.index",compact("data"));
+        return view("admin.pengguna.index", compact("data"));
+    }
+
+    public function verified()
+    {
+        $data = $this->get("users");
+        return view("admin.pengguna.verified", compact("data"));
+    }
+
+    public function unverified()
+    {
+        $data = $this->get("users");
+        return view("admin.pengguna.unverified", compact("data"));
     }
 
     /**

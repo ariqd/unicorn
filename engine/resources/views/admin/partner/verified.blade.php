@@ -42,7 +42,7 @@ Pengguna - Belum Diproses
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h1>Pengguna</h1>
+                    <h1>Partner Disetujui</h1>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-stripped">

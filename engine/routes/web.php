@@ -29,6 +29,7 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::middleware('admin')->group(function () {
 
     Route::get('admin', 'Admin\HomeController@index')->name('admin.home');
+    Route::get('admin/test', 'Admin\HomeController@show')->name('admin.home');
     Route::get('admin/shipments/{id}/tracking', 'Admin\ShipmentController@tracking');
     //Route::get('admin/shipments/{lat}/{long}/{lat2}/{long2}/mapper', 'Admin\ShipmentController@mapper');
 

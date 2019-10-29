@@ -16,7 +16,7 @@ class Controller extends BaseController
 	{
 		$client = new Client([
 			//'base_uri' => 'http://makayasaareca.com:50855/api/',
-			'base_uri' => 'http://10.200.0.20:3000/api/',
+			'base_uri' => 'http://localhost:3000/api/',
 			'headers' => [
 				'Content-Type' => 'application/json',
 				// 'Authorization' => 'Bearer ' . session()->get('apitokenpos')

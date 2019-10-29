@@ -11,4 +11,11 @@ class HomeController extends Controller
     {
         return view('admin.index');
     }
+
+
+    public function show()
+    {
+    	$data = $this->get("partners/");
+    	dd($data);
+    }
 }

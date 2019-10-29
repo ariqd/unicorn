@@ -26,6 +26,14 @@
                 @if($pengguna->activation == 0)
                     <button type="submit" class="btn btn-success">Setujui Pendaftaran</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Tolak Pendaftaran</button>
+                @elseif($pengguna->activation == 1)
+                <div class="form-group form-group-default">
+                    <label>Status: Disetujui</label>
+                </div>
+                @else
+                <div class="form-group form-group-default">
+                    <label>Status: Tidak Disetujui</label>
+                </div>
                 @endif
             </form>
         </div>

@@ -52,7 +52,7 @@ class LoginController extends Controller
         $input = $request->all();
         unset($input["_token"]);
         try {
-            $response = $client->post("http://makayasaareca.com:50855/api/users_login", [
+            $response = $client->post("http://localhost:3000/api/users_login", [
                 'json' => $input
             ]);
         } catch (Exception $e) {
