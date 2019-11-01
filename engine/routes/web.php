@@ -39,11 +39,11 @@ Route::middleware('admin')->group(function () {
     Route::resource('admin/pengiriman', 'Admin\SendShipmentController');
     Route::resource('admin/truk', 'Admin\TruckController');
     Route::get('admin/pengguna/belumdiproses', 'Admin\PenggunaController@index');
-    Route::get('admin/pengguna/disetujui', 'Admin\PenggunaController@index');
-    Route::get('admin/pengguna/ditolak', 'Admin\PenggunaController@index');
+    Route::get('admin/pengguna/disetujui', 'Admin\PenggunaController@verified');
+    Route::get('admin/pengguna/ditolak', 'Admin\PenggunaController@unverified');
     Route::get('admin/partner/belumdiproses', 'Admin\PartnerController@index');
-    Route::get('admin/partner/disetujui', 'Admin\PartnerController@index');
-    Route::get('admin/partner/ditolak', 'Admin\PartnerController@index');
+    Route::get('admin/partner/disetujui', 'Admin\PartnerController@verified');
+    Route::get('admin/partner/ditolak', 'Admin\PartnerController@unverified');
     Route::resource('admin/pengguna', 'Admin\PenggunaController');
     Route::resource('admin/partner', 'Admin\PartnerController');
 });

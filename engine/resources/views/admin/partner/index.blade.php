@@ -49,7 +49,7 @@ Partner - Belum Diproses
                         <thead>
                             <th>Line No.</th>
                             <th>Nama</th>
-                            <th>No. HP</th>
+                            <th>No. Telepon</th>
                             <th>Alamat</th>
                             <th>Action</th>
                         </thead>
@@ -58,7 +58,13 @@ Partner - Belum Diproses
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$item->name}}</td>
-                                <td>{{$item->telephone}}</td>
+                                <td>
+                                    @if(!empty($item->telephone))
+                                        {{ $item->telephone }}
+                                    @else
+                                        ---
+                                    @endif
+                                </td>
                                 <td>{{$item->address}}</td>
                                 <td>
                                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detail</button> -->

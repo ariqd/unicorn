@@ -15,21 +15,26 @@ Driver
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <div class="float-right">
-                        <label>
-                            Filter Kota Tujuan
-                        </label>
-                        <select class="form-control kota"></select>
-                    </div>
-
-                    <div class="float-right ">
-                        <label>
-                            Filter Kota Asal
-                        </label>
-                        <select class="form-control kota"></select>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1>Bidding</h1>
+                        </div>
+                        <div class="col-md-2">
+                            Filter Kota Asal<br/>
+                            <select class="form-control">
+                                <option value="---">---</option>
+                                <option value="Bandung">Bandung</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            Filter Kota Tujuan<br/>
+                            <select class="form-control">
+                                <option value="---">---</option>
+                                <option value="Jakarta">Jakarta</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-
                 <div class="card-body">
                     <table class="table table-bordered table-stripped">
                         <thead>

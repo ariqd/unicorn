@@ -42,7 +42,7 @@ Pengguna - Belum Diproses
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h1>Pengguna</h1>
+                    <h1>Pengguna (Belum Diproses)</h1>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-stripped">
@@ -59,7 +59,13 @@ Pengguna - Belum Diproses
                                 <td>{{ $loop->iteration }} </td>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->username }} </td>
-                                <td>{{ $item->telephone }} </td>
+                                <td>
+                                    @if(!empty($item->telephone))
+                                        {{ $item->telephone }}
+                                    @else
+                                        ---
+                                    @endif 
+                                </td>
                                 <td>
                                 <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detail</button> -->
                                 <div class="btn-group">

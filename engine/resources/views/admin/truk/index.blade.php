@@ -11,7 +11,7 @@ Pengaturan Truk
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h2>Pengaturan Truk</h2>
+                    <h2>Truk</h2>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-stripped">
@@ -21,6 +21,7 @@ Pengaturan Truk
                             <th>Kapasitas</th>
                             <th>Wheel</th>
                             <th>Ukuran</th>
+                            
                             <th></th>
                         </thead>
                         <tbody>
@@ -34,6 +35,8 @@ Pengaturan Truk
                                 <td>
                                     <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/truk/'.$item->_id) }}" class="btn btn-primary">
                                             <i class="fa fa-eye"></i> Detail</a>
+                                    <a href="#modalForm" data-toggle="modal" data-href="{{ url('admin/truk/'.$item->_id) }}" class="btn btn-primary">
+                                            <i class="fa fa-edit"></i> Ubah</a>
                                 </td>
                             </tr>
                             @endforeach

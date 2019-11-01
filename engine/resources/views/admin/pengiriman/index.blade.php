@@ -11,23 +11,18 @@ Pengiriman - Belum Dikirim
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md-8"></div>
-                        <div class="col-md-2">
-                            Kota Asal:
+                        <div class="col-md-8">
+                            <h1>Muatan Belum Dikirim</h1>
                         </div>
                         <div class="col-md-2">
-                            Kota Tujuan:
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8"></div>
-                        <div class="col-md-2">
+                            Kota Asal: <br/>
                             <select class="form-control">
                                 <option value="---">---</option>
                                 <option value="Bandung">Bandung</option>
                             </select>
                         </div>
                         <div class="col-md-2">
+                            Kota Tujuan: <br/>
                             <select class="form-control">
                                 <option value="---">---</option>
                                 <option value="Jakarta">Jakarta</option>
@@ -39,6 +34,8 @@ Pengiriman - Belum Dikirim
                     <table class="table table-bordered table-stripped">
                         <thead>
                             <th>Line No.</th>
+                            <th>Tanggal</th>
+                            <th>Waktu</th>
                             <th>Ambil Muatan</th>
                             <th>Tujuan Muatan</th>
                             <th>User</th>
@@ -51,11 +48,14 @@ Pengiriman - Belum Dikirim
                             @foreach($data as $item)
                             <tr>
                                 <td>{{ $loop->iteration }} </td>
+                                @foreach(preg_split('/(T|Z)/', $item->date_order, -1, PREG_SPLIT_NO_EMPTY) as $row)
+                                    <td>{{ $row }}</td>
+                                @endforeach
                                 <td>{{-- $item->from --}} Bandung</td>
                                 <td>{{-- $item->to --}} Jakarta</td>
                                 <td>@foreach($item->users as $item1) {{ $item1->name }} @endforeach</td>
                                 <td>@foreach($item->driver as $item2) {{ $item2->name }} @endforeach</td>
-                                <td>@foreach($item->product as $item3) {{ $item3->typename }} @endforeach</td>
+                                <td>@foreach($item->product as $item3) {{ $item3->typeName }} @endforeach</td>
                                 <td>{{ "Rp. ".number_format($item->budget).",-" }}</td>
                                 <td>
                                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Kirim</button> -->

@@ -78,7 +78,7 @@ class DriverController extends Controller
     {
         $this->put("drivers/$id", $request->all());
 
-        return redirect()->back()->with('info', 'Driver berhasil ditambahkan!');
+        return redirect()->back()->with('info', 'Driver berhasil di-update!');
     }
 
     /**

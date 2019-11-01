@@ -14,7 +14,8 @@ class TruckController extends Controller
      */
     public function index()
     {
-        return view('admin.truk.index');
+        $data = $this->get("trucks");
+        return view('admin.truk.index', compact("data"));
     }
 
     /**
@@ -46,7 +47,7 @@ class TruckController extends Controller
      */
     public function show($id)
     {
-        $truk = $this->get("users/$id");
+        $truk = $this->get("trucks/$id");
         return view('admin.truk.show', compact("truk"));
     }
 
@@ -58,7 +59,8 @@ class TruckController extends Controller
      */
     public function edit($id)
     {
-        //
+        $truk = $this->get("trucks/$id");
+        return view('admin.truk.show', compact("truk"));
     }
 
     /**
@@ -70,7 +72,9 @@ class TruckController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->put("trucks/$id", $request->all());
+
+        return redirect()->back()->with('info', 'Truk berhasil di-update!');
     }
 
     /**

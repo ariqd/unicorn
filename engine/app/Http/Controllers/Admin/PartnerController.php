@@ -27,7 +27,7 @@ class PartnerController extends Controller
     public function unverified()
     {
         $data = $this->get("partners/");
-        return view("admin.partner.verified", compact("data"));
+        return view("admin.partner.unverified", compact("data"));
     }
 
     /**
